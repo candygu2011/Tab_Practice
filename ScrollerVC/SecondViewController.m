@@ -10,7 +10,6 @@
 //颜色与随机颜色
 #define kRGBColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
 #define kARGBColor(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
-#define kRandomColor KRGBColor(arc4random() % 256 / 256.0, arc4random() % 256 / 256.0, arc4random() % 256 / 256.0)
 @interface SecondViewController ()
 
 @end
