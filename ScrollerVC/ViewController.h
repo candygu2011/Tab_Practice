@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 /**
- *  创建分之代码   git  xcode 
+ *  创建分之代码   git  xcode
  */
 @interface ViewController : UIViewController
 
