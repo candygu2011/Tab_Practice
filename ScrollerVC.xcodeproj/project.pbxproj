@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0674AE821B74A0A400466721 /* GMLCustomAlterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0674AE811B74A0A400466721 /* GMLCustomAlterView.m */; };
+		0674AE861B74AA1100466721 /* face_cry@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0674AE851B74AA1100466721 /* face_cry@2x.png */; };
+		0674AE881B74AA4000466721 /* touxiang@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0674AE871B74AA4000466721 /* touxiang@2x.png */; };
+		0674AE8A1B74B1B700466721 /* 4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0674AE891B74B1B700466721 /* 4@2x.png */; };
+		0674AE8C1B74B1FF00466721 /* bg_kefu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0674AE8B1B74B1FF00466721 /* bg_kefu@2x.png */; };
 		06BFA4AF1B5799E500C4BCBE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 06BFA4AE1B5799E500C4BCBE /* main.m */; };
 		06BFA4B21B5799E500C4BCBE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 06BFA4B11B5799E500C4BCBE /* AppDelegate.m */; };
 		06BFA4B51B5799E500C4BCBE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06BFA4B41B5799E500C4BCBE /* ViewController.m */; };
@@ -48,6 +53,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0674AE801B74A0A400466721 /* GMLCustomAlterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMLCustomAlterView.h; sourceTree = "<group>"; };
+		0674AE811B74A0A400466721 /* GMLCustomAlterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMLCustomAlterView.m; sourceTree = "<group>"; };
+		0674AE851B74AA1100466721 /* face_cry@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "face_cry@2x.png"; sourceTree = "<group>"; };
+		0674AE871B74AA4000466721 /* touxiang@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "touxiang@2x.png"; sourceTree = "<group>"; };
+		0674AE891B74B1B700466721 /* 4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "4@2x.png"; sourceTree = "<group>"; };
+		0674AE8B1B74B1FF00466721 /* bg_kefu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_kefu@2x.png"; sourceTree = "<group>"; };
 		06BFA4A91B5799E500C4BCBE /* ScrollerVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrollerVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06BFA4AD1B5799E500C4BCBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06BFA4AE1B5799E500C4BCBE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -123,6 +134,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0674AE7E1B74A05000466721 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0674AE801B74A0A400466721 /* GMLCustomAlterView.h */,
+				0674AE811B74A0A400466721 /* GMLCustomAlterView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		0674AE7F1B74A06300466721 /* Rescoure */ = {
+			isa = PBXGroup;
+			children = (
+				0674AE8B1B74B1FF00466721 /* bg_kefu@2x.png */,
+				0674AE891B74B1B700466721 /* 4@2x.png */,
+				0674AE871B74AA4000466721 /* touxiang@2x.png */,
+				0674AE851B74AA1100466721 /* face_cry@2x.png */,
+				06BFA5131B57B37C00C4BCBE /* pic.jpg */,
+			);
+			name = Rescoure;
+			sourceTree = "<group>";
+		};
 		06BFA4A01B5799E500C4BCBE = {
 			isa = PBXGroup;
 			children = (
@@ -144,7 +176,8 @@
 		06BFA4AB1B5799E500C4BCBE /* ScrollerVC */ = {
 			isa = PBXGroup;
 			children = (
-				06BFA5131B57B37C00C4BCBE /* pic.jpg */,
+				0674AE7F1B74A06300466721 /* Rescoure */,
+				0674AE7E1B74A05000466721 /* View */,
 				06BFA5121B57B0B800C4BCBE /* Extention */,
 				06BFA5111B57B0A100C4BCBE /* Controllers */,
 				06BFA4DF1B57B09D00C4BCBE /* SDWebImage */,
@@ -329,8 +362,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				06BFA4B81B5799E500C4BCBE /* Main.storyboard in Resources */,
+				0674AE8A1B74B1B700466721 /* 4@2x.png in Resources */,
+				0674AE881B74AA4000466721 /* touxiang@2x.png in Resources */,
 				06BFA5141B57B37C00C4BCBE /* pic.jpg in Resources */,
+				0674AE861B74AA1100466721 /* face_cry@2x.png in Resources */,
 				06BFA4BD1B5799E500C4BCBE /* LaunchScreen.xib in Resources */,
+				0674AE8C1B74B1FF00466721 /* bg_kefu@2x.png in Resources */,
 				06BFA4BA1B5799E500C4BCBE /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,6 +407,7 @@
 				06BFA5041B57B09D00C4BCBE /* SDWebImageCompat.m in Sources */,
 				06BFA5091B57B09D00C4BCBE /* SDWebImageManager.m in Sources */,
 				06BFA4B21B5799E500C4BCBE /* AppDelegate.m in Sources */,
+				0674AE821B74A0A400466721 /* GMLCustomAlterView.m in Sources */,
 				06BFA4AF1B5799E500C4BCBE /* main.m in Sources */,
 				06BFA5171B57B80100C4BCBE /* DeleteTableViewController.m in Sources */,
 			);

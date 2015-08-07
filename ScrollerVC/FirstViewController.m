@@ -8,6 +8,7 @@
 
 #import "FirstViewController.h"
 #import "UIImageView+WebCache.h"
+#import "GMLCustomAlterView.h"
 @interface FirstViewController ()
 //剩余票数
 
@@ -140,6 +141,37 @@
 {
     self.logoImg.image = image;
 }
+
+// GCD 多线程
+/*
+    CGD是纯C的代码 所以它是函数不是方法
+ 
+ （1）用同步的方式执行任务 dispatch_sync(dispatch_queue_t queue, dispatch_block_t block);
+ 
+ 参数说明：
+ 
+ queue：队列
+ 
+ block：任务
+ 
+ 
+ 
+ （2）用异步的方式执行任务 dispatch_async(dispatch_queue_t queue, dispatch_block_t block);
+ 
+ 以上两个函数都是将右边的参数（任务）放到左边的参数（队列）中执行
+
+ 
+ */
+- (IBAction)gcdAction:(id)sender {
+    
+    
+    GMLCustomAlterView *alterView = [[GMLCustomAlterView alloc] initWithFrame:self.view.bounds style:GMLCustomAlterViewStyleGlobal];
+    
+    [alterView showView];
+    
+}
+
+
 
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
