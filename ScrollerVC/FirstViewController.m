@@ -25,7 +25,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _label.text = @"就是是不素不素不素说不上班不素不素说不素说不上班hishdif佳佳";
+    _label.text = @"就只是在测试下autolayout而已啦啦啦啦啦啦啦啦";
     
     /*一、线程锁 */
     //默认有20张票
@@ -117,7 +117,29 @@
     [self.thread3 start];
     
 }
-
+/**
+ *  下载网络图片  本地显示
+ */
+- (IBAction)downloadImage:(id)sender {
+    
+    NSURL *url = [NSURL URLWithString:@"http://pic.tuanche.com/car/20150420/14295244097434751_s.jpg"];
+    NSData *data = [NSData dataWithContentsOfURL:url];
+    
+     UIImage *image=[UIImage imageWithData:data];
+    
+    //  返回主线程  更新图片
+//    [self performSelector:@selector(upDateLogImage:) onThread:[NSThread mainThread] withObject:image waitUntilDone:NO];
+    
+    [self performSelectorOnMainThread:@selector(upDateLogImage:) withObject:image waitUntilDone:NO];
+    
+    
+    
+}
+// 更新logo图片
+-(void)upDateLogImage:(UIImage *)image
+{
+    self.logoImg.image = image;
+}
 
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
