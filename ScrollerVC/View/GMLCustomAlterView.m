@@ -65,7 +65,7 @@
     _messageLabel.textAlignment = NSTextAlignmentCenter;
     _messageLabel.font = [UIFont systemFontOfSize:18];
     _messageLabel.textColor = kRGBColor(0x20, 0x20, 0x20);
-//    _messageLabel.text = @"提交失败  稍后再试";
+//    _messageLabel.text = @" CGD是纯C的代码 所以它是函数不是方法（1）用同步的方式执行任务 dispatch_sync(dispatch_queue_t queue, dispatch_block_t block);  参数说明：queue：队列 block：任务2）用异步的方式执行任务 dispatch_async(dispatch_queue_t queue, dispatch_block_t block);以上两个函数都是将右边的参数（任务）放到左边的参数（队列）中执";
     [_contentView addSubview:_messageLabel];
     
     _confirmButton = [UIButton buttonWithType:UIButtonTypeCustom];
