@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>B356C51B-B94D-4755-A972-8649A572E885</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>ScrollerVC</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>ED6F265EBF354363CDA79240184EFFAE2B87110B</key>
 		<string>https://github.com/candygu2011/Tab_Practice.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>ScrollerVC.xcodeproj/project.xcworkspace</string>
+	<string>ScrollerVC.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>ED6F265EBF354363CDA79240184EFFAE2B87110B</key>

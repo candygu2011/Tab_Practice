@@ -101,18 +101,30 @@
                                     <segue destination="9he-WS-pCp" kind="push" id="A0d-RT-xLt"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJw-Nt-7kA">
+                                <rect key="frame" x="220" y="435" width="171" height="30"/>
+                                <state key="normal" title="人脸识别">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Rbw-nG-WIN" kind="push" id="FSq-7r-5tU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="JIS-bZ-0MW" firstAttribute="top" secondItem="8hE-7O-fFJ" secondAttribute="bottom" constant="10" id="3Ns-gr-QfT"/>
                             <constraint firstAttribute="centerX" secondItem="PPa-pR-MlN" secondAttribute="centerX" id="4jm-DP-TKs"/>
+                            <constraint firstItem="HJw-Nt-7kA" firstAttribute="leading" secondItem="dGb-fc-Ys3" secondAttribute="leading" id="I6I-2J-rfQ"/>
                             <constraint firstItem="8hE-7O-fFJ" firstAttribute="top" secondItem="PPa-pR-MlN" secondAttribute="bottom" constant="10" id="K0U-QI-1nE"/>
                             <constraint firstItem="JIS-bZ-0MW" firstAttribute="width" secondItem="dGb-fc-Ys3" secondAttribute="width" id="Luz-bo-1z6"/>
+                            <constraint firstItem="HJw-Nt-7kA" firstAttribute="top" secondItem="dGb-fc-Ys3" secondAttribute="bottom" constant="10" id="MnQ-4W-LDC"/>
                             <constraint firstItem="8hE-7O-fFJ" firstAttribute="centerX" secondItem="PPa-pR-MlN" secondAttribute="centerX" constant="4.5" id="TD6-GT-ISu"/>
                             <constraint firstItem="JIS-bZ-0MW" firstAttribute="leading" secondItem="8hE-7O-fFJ" secondAttribute="leading" id="UZx-6u-rAC"/>
                             <constraint firstItem="dGb-fc-Ys3" firstAttribute="top" secondItem="JIS-bZ-0MW" secondAttribute="bottom" constant="10" id="YGk-Km-aGd"/>
                             <constraint firstItem="8hE-7O-fFJ" firstAttribute="leading" secondItem="PPa-pR-MlN" secondAttribute="leading" constant="9" id="YLi-Ur-jrd"/>
                             <constraint firstItem="PPa-pR-MlN" firstAttribute="top" secondItem="ErY-MJ-vst" secondAttribute="bottom" constant="10" id="e3w-wP-Yay"/>
+                            <constraint firstItem="HJw-Nt-7kA" firstAttribute="height" secondItem="dGb-fc-Ys3" secondAttribute="height" id="eLf-AN-dLD"/>
                             <constraint firstItem="8hE-7O-fFJ" firstAttribute="width" secondItem="PPa-pR-MlN" secondAttribute="width" id="fdA-Ag-JFm"/>
                             <constraint firstItem="GJC-Tl-BIv" firstAttribute="top" secondItem="Oe3-gc-Mbw" secondAttribute="bottom" constant="50" id="fli-xy-qCZ"/>
                             <constraint firstItem="ErY-MJ-vst" firstAttribute="centerX" secondItem="GJC-Tl-BIv" secondAttribute="centerX" constant="0.5" id="h7P-Fk-bQj"/>
@@ -122,6 +134,7 @@
                             <constraint firstItem="ErY-MJ-vst" firstAttribute="top" secondItem="GJC-Tl-BIv" secondAttribute="bottom" constant="30" id="oMl-rD-Re8"/>
                             <constraint firstAttribute="centerX" secondItem="GJC-Tl-BIv" secondAttribute="centerX" id="obC-zY-kD1"/>
                             <constraint firstItem="JIS-bZ-0MW" firstAttribute="height" secondItem="dGb-fc-Ys3" secondAttribute="height" id="pQy-Uj-mcZ"/>
+                            <constraint firstItem="HJw-Nt-7kA" firstAttribute="width" secondItem="dGb-fc-Ys3" secondAttribute="width" id="z22-Gm-oPz"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -175,6 +188,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ncy-ja-N40" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1209" y="1232"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="wUm-Dk-Cmp">
+            <objects>
+                <viewController id="Rbw-nG-WIN" customClass="QRViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aqa-oV-7EU"/>
+                        <viewControllerLayoutGuide type="bottom" id="AGZ-cf-rpg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6kV-tZ-ZQs">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="OwU-Pi-5EN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QcI-sJ-1eT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1197" y="1901"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="TYZ-Dz-PfP">
