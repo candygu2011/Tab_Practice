@@ -125,6 +125,23 @@
     
 }
 
+
+- (IBAction)deleteData:(id)sender
+{
+    
+    FMDatabase *db = [FMDatabase databaseWithPath:dataBasePath];
+    if ([db open]) {
+        NSString *sql = @"DELETE FROM gml";
+        if ([db executeUpdate:sql]) {
+            NSLog(@"delete succ");
+        }else{
+            NSLog(@"delete faild ");
+        }
+    }
+}
+
+
+
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     [self.view endEditing:YES];

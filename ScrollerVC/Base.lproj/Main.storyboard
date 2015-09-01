@@ -373,6 +373,15 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gda-OA-tQ4">
+                                <rect key="frame" x="16" y="420" width="81" height="30"/>
+                                <state key="normal" title="delete Data">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteData:" destination="6EX-dB-Emj" eventType="touchUpInside" id="4Ln-Jx-Vqq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -397,7 +406,9 @@
                             <constraint firstItem="vnq-jb-y1I" firstAttribute="height" secondItem="WbY-KP-1e2" secondAttribute="height" id="NSU-DY-mbr"/>
                             <constraint firstItem="vnq-jb-y1I" firstAttribute="height" secondItem="auZ-eu-h9j" secondAttribute="height" id="Noc-n8-KkP"/>
                             <constraint firstItem="lcK-b2-Xdd" firstAttribute="top" secondItem="2QW-RY-Eh7" secondAttribute="top" id="OKb-Pg-dBi"/>
+                            <constraint firstItem="gda-OA-tQ4" firstAttribute="top" secondItem="BP5-WE-2pX" secondAttribute="bottom" constant="10" id="P4T-OV-koY"/>
                             <constraint firstItem="foq-pp-dhM" firstAttribute="top" secondItem="auZ-eu-h9j" secondAttribute="bottom" constant="20" id="Prb-BG-xpa"/>
+                            <constraint firstItem="gda-OA-tQ4" firstAttribute="height" secondItem="BP5-WE-2pX" secondAttribute="height" id="QkG-o6-i50"/>
                             <constraint firstItem="foq-pp-dhM" firstAttribute="leading" secondItem="EEN-eR-YF5" secondAttribute="leading" constant="5" id="Qpe-kO-9lV"/>
                             <constraint firstItem="X3d-KX-M3r" firstAttribute="top" secondItem="aOt-pu-cUH" secondAttribute="bottom" constant="10" id="RaW-Wu-12f"/>
                             <constraint firstItem="BP5-WE-2pX" firstAttribute="height" secondItem="2QW-RY-Eh7" secondAttribute="height" id="SDO-Z9-1CG"/>
@@ -416,7 +427,9 @@
                             <constraint firstItem="auZ-eu-h9j" firstAttribute="top" secondItem="bs5-oY-1kw" secondAttribute="top" id="ioZ-fb-mHG"/>
                             <constraint firstItem="foq-pp-dhM" firstAttribute="width" secondItem="auZ-eu-h9j" secondAttribute="width" id="iw9-wF-rdC"/>
                             <constraint firstItem="Fjf-4R-baW" firstAttribute="leading" secondItem="bs5-oY-1kw" secondAttribute="leading" id="jy8-je-lvZ"/>
+                            <constraint firstItem="gda-OA-tQ4" firstAttribute="width" secondItem="BP5-WE-2pX" secondAttribute="width" id="kIm-Bx-TOq"/>
                             <constraint firstItem="hJH-m9-P34" firstAttribute="top" secondItem="EEN-eR-YF5" secondAttribute="top" id="lom-yD-3Rx"/>
+                            <constraint firstItem="gda-OA-tQ4" firstAttribute="leading" secondItem="BP5-WE-2pX" secondAttribute="leading" constant="1" id="nNh-Oi-yJk"/>
                             <constraint firstItem="foq-pp-dhM" firstAttribute="leading" secondItem="auZ-eu-h9j" secondAttribute="leading" id="qk8-uE-Udn"/>
                             <constraint firstItem="BP5-WE-2pX" firstAttribute="width" secondItem="2QW-RY-Eh7" secondAttribute="width" id="rtp-IB-6ph"/>
                             <constraint firstItem="Fjf-4R-baW" firstAttribute="height" secondItem="bs5-oY-1kw" secondAttribute="height" id="rw4-wx-MzY"/>
