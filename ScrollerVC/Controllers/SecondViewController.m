@@ -19,23 +19,31 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.view.backgroundColor =     kRGBColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255));
-;
+    self.view.backgroundColor =  kRGBColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255));
+//    [self dotteLine];
+
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)dotteLine
+{
+    /*
+     *画虚线
+     */
+    CAShapeLayer *dotteShapeLayer = [CAShapeLayer layer];
+    CGMutablePathRef dotteShapePath =  CGPathCreateMutable();
+    [dotteShapeLayer setFillColor:[[UIColor clearColor] CGColor]];
+    [dotteShapeLayer setStrokeColor:[[UIColor orangeColor] CGColor]];
+    dotteShapeLayer.lineWidth = 2.0f ;
+    NSArray *dotteShapeArr = [[NSArray alloc] initWithObjects:[NSNumber numberWithInt:10],[NSNumber numberWithInt:5], nil];
+    [dotteShapeLayer setLineDashPattern:dotteShapeArr];
+    CGPathMoveToPoint(dotteShapePath, NULL, [UIScreen mainScreen].bounds.size.width*0.5,0);
+//    CGPathAddLineToPoint(dotteShapePath, NULL, 20, 285);
+    CGPathAddLineToPoint(dotteShapePath, NULL, [UIScreen mainScreen].bounds.size.width*0.5,[UIScreen mainScreen].bounds.size.height);
+    [dotteShapeLayer setPath:dotteShapePath];
+    CGPathRelease(dotteShapePath);
+    [self.view.layer addSublayer:dotteShapeLayer];
+    
 }
-*/
 
 @end

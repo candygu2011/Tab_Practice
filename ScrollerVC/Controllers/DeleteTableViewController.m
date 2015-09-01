@@ -7,6 +7,7 @@
 //
 
 #import "DeleteTableViewController.h"
+#import "FMDBDemoViewController.h"
 
 @interface DeleteTableViewController ()
 
@@ -49,7 +50,12 @@
     return cell;
 
 }
-
+-(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    FMDBDemoViewController *demoVC = [self.storyboard instantiateViewControllerWithIdentifier:@"FMDBDemoViewController"];
+    self.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:demoVC animated:YES];
+}
 
 
 // Override to support conditional editing of the table view.

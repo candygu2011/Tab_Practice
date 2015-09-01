@@ -43,6 +43,11 @@
 		06076E351B7B4E1C0057930C /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 06076E341B7B4E1C0057930C /* libsqlite3.dylib */; };
 		065FED0B1B7C617A00FB8E64 /* QRScan.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 065FED081B7C617A00FB8E64 /* QRScan.bundle */; };
 		065FED0C1B7C617A00FB8E64 /* QRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 065FED0A1B7C617A00FB8E64 /* QRViewController.m */; };
+		066038B11B8C3F6900587700 /* NSDictionary+Additional.m in Sources */ = {isa = PBXBuildFile; fileRef = 066038B01B8C3F6900587700 /* NSDictionary+Additional.m */; };
+		0661B9131B954C5100D37FFE /* FMDBDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0661B9121B954C5100D37FFE /* FMDBDemoViewController.m */; };
+		066282EA1B8D53B100D3E693 /* GMLLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 066282E51B8D53B100D3E693 /* GMLLocation.m */; };
+		066282EB1B8D53B100D3E693 /* GMLLocationDetailAddressManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 066282E71B8D53B100D3E693 /* GMLLocationDetailAddressManager.m */; };
+		066282EC1B8D53B100D3E693 /* GMLLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 066282E91B8D53B100D3E693 /* GMLLocationManager.m */; };
 		066B353B1B7B493700F8654A /* 4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 066B35321B7B493700F8654A /* 4@2x.png */; };
 		066B353C1B7B493700F8654A /* bg_kefu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 066B35331B7B493700F8654A /* bg_kefu@2x.png */; };
 		066B353D1B7B493700F8654A /* face_cry@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 066B35341B7B493700F8654A /* face_cry@2x.png */; };
@@ -151,6 +156,16 @@
 		065FED081B7C617A00FB8E64 /* QRScan.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = QRScan.bundle; sourceTree = "<group>"; };
 		065FED091B7C617A00FB8E64 /* QRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRViewController.h; sourceTree = "<group>"; };
 		065FED0A1B7C617A00FB8E64 /* QRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRViewController.m; sourceTree = "<group>"; };
+		066038AF1B8C3F6900587700 /* NSDictionary+Additional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Additional.h"; sourceTree = "<group>"; };
+		066038B01B8C3F6900587700 /* NSDictionary+Additional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Additional.m"; sourceTree = "<group>"; };
+		0661B9111B954C5100D37FFE /* FMDBDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDBDemoViewController.h; sourceTree = "<group>"; };
+		0661B9121B954C5100D37FFE /* FMDBDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDBDemoViewController.m; sourceTree = "<group>"; };
+		066282E41B8D53B100D3E693 /* GMLLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMLLocation.h; sourceTree = "<group>"; };
+		066282E51B8D53B100D3E693 /* GMLLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMLLocation.m; sourceTree = "<group>"; };
+		066282E61B8D53B100D3E693 /* GMLLocationDetailAddressManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMLLocationDetailAddressManager.h; sourceTree = "<group>"; };
+		066282E71B8D53B100D3E693 /* GMLLocationDetailAddressManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMLLocationDetailAddressManager.m; sourceTree = "<group>"; };
+		066282E81B8D53B100D3E693 /* GMLLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMLLocationManager.h; sourceTree = "<group>"; };
+		066282E91B8D53B100D3E693 /* GMLLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMLLocationManager.m; sourceTree = "<group>"; };
 		066B35321B7B493700F8654A /* 4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "4@2x.png"; sourceTree = "<group>"; };
 		066B35331B7B493700F8654A /* bg_kefu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_kefu@2x.png"; sourceTree = "<group>"; };
 		066B35341B7B493700F8654A /* face_cry@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "face_cry@2x.png"; sourceTree = "<group>"; };
@@ -317,6 +332,19 @@
 			path = QRScan;
 			sourceTree = "<group>";
 		};
+		066282E31B8D53AB00D3E693 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				066282E41B8D53B100D3E693 /* GMLLocation.h */,
+				066282E51B8D53B100D3E693 /* GMLLocation.m */,
+				066282E61B8D53B100D3E693 /* GMLLocationDetailAddressManager.h */,
+				066282E71B8D53B100D3E693 /* GMLLocationDetailAddressManager.m */,
+				066282E81B8D53B100D3E693 /* GMLLocationManager.h */,
+				066282E91B8D53B100D3E693 /* GMLLocationManager.m */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
 		066B35311B7B493700F8654A /* Rescoure */ = {
 			isa = PBXGroup;
 			children = (
@@ -345,6 +373,8 @@
 		066B35481B7B496D00F8654A /* Extention */ = {
 			isa = PBXGroup;
 			children = (
+				066038AF1B8C3F6900587700 /* NSDictionary+Additional.h */,
+				066038B01B8C3F6900587700 /* NSDictionary+Additional.m */,
 				066B35491B7B496D00F8654A /* UIView+Additional.h */,
 				066B354A1B7B496D00F8654A /* UIView+Additional.m */,
 				066B354B1B7B496D00F8654A /* UIView+Extension.h */,
@@ -366,6 +396,8 @@
 				066B35571B7B498E00F8654A /* SecondViewController.m */,
 				066B35581B7B498E00F8654A /* ViewController.h */,
 				066B35591B7B498E00F8654A /* ViewController.m */,
+				0661B9111B954C5100D37FFE /* FMDBDemoViewController.h */,
+				0661B9121B954C5100D37FFE /* FMDBDemoViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -392,6 +424,7 @@
 		06BFA4AB1B5799E500C4BCBE /* ScrollerVC */ = {
 			isa = PBXGroup;
 			children = (
+				066282E31B8D53AB00D3E693 /* Location */,
 				065FED071B7C617A00FB8E64 /* QRScan */,
 				06076DCB1B7B4A660057930C /* 3lib */,
 				066B354F1B7B498E00F8654A /* Controllers */,
@@ -545,6 +578,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				066282EA1B8D53B100D3E693 /* GMLLocation.m in Sources */,
 				06076DF91B7B4A660057930C /* UIImage+GIF.m in Sources */,
 				06076E2F1B7B4DFB0057930C /* FMDatabase.m in Sources */,
 				066B355D1B7B498E00F8654A /* SecondViewController.m in Sources */,
@@ -560,6 +594,7 @@
 				066B354D1B7B496D00F8654A /* UIView+Additional.m in Sources */,
 				06076DFC1B7B4A660057930C /* UIImageView+MJWebCache.m in Sources */,
 				06076DF81B7B4A660057930C /* UIButton+WebCache.m in Sources */,
+				0661B9131B954C5100D37FFE /* FMDBDemoViewController.m in Sources */,
 				06076DF11B7B4A660057930C /* SDWebImageCompat.m in Sources */,
 				066B355C1B7B498E00F8654A /* FirstViewController.m in Sources */,
 				06076DF21B7B4A660057930C /* SDWebImageDecoder.m in Sources */,
@@ -577,6 +612,7 @@
 				06076E1A1B7B4A700057930C /* MJRefreshFooter.m in Sources */,
 				06076E331B7B4DFB0057930C /* FMResultSet.m in Sources */,
 				06076DF61B7B4A660057930C /* SDWebImageManager.m in Sources */,
+				066282EC1B8D53B100D3E693 /* GMLLocationManager.m in Sources */,
 				06076E181B7B4A700057930C /* MJRefreshComponent.m in Sources */,
 				06076E191B7B4A700057930C /* MJRefreshConst.m in Sources */,
 				06076E1D1B7B4A700057930C /* MJRefreshHeader.m in Sources */,
@@ -588,6 +624,8 @@
 				065FED0C1B7C617A00FB8E64 /* QRViewController.m in Sources */,
 				06BFA4AF1B5799E500C4BCBE /* main.m in Sources */,
 				066B355B1B7B498E00F8654A /* DeleteTableViewController.m in Sources */,
+				066038B11B8C3F6900587700 /* NSDictionary+Additional.m in Sources */,
+				066282EB1B8D53B100D3E693 /* GMLLocationDetailAddressManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
