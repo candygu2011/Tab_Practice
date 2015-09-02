@@ -45,6 +45,7 @@
 		065FED0C1B7C617A00FB8E64 /* QRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 065FED0A1B7C617A00FB8E64 /* QRViewController.m */; };
 		066038B11B8C3F6900587700 /* NSDictionary+Additional.m in Sources */ = {isa = PBXBuildFile; fileRef = 066038B01B8C3F6900587700 /* NSDictionary+Additional.m */; };
 		0661B9131B954C5100D37FFE /* FMDBDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0661B9121B954C5100D37FFE /* FMDBDemoViewController.m */; };
+		0661B9181B95B39C00D37FFE /* ico_jiahao@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0661B9171B95B39C00D37FFE /* ico_jiahao@2x.png */; };
 		066282EA1B8D53B100D3E693 /* GMLLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 066282E51B8D53B100D3E693 /* GMLLocation.m */; };
 		066282EB1B8D53B100D3E693 /* GMLLocationDetailAddressManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 066282E71B8D53B100D3E693 /* GMLLocationDetailAddressManager.m */; };
 		066282EC1B8D53B100D3E693 /* GMLLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 066282E91B8D53B100D3E693 /* GMLLocationManager.m */; };
@@ -160,6 +161,7 @@
 		066038B01B8C3F6900587700 /* NSDictionary+Additional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Additional.m"; sourceTree = "<group>"; };
 		0661B9111B954C5100D37FFE /* FMDBDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDBDemoViewController.h; sourceTree = "<group>"; };
 		0661B9121B954C5100D37FFE /* FMDBDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDBDemoViewController.m; sourceTree = "<group>"; };
+		0661B9171B95B39C00D37FFE /* ico_jiahao@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico_jiahao@2x.png"; sourceTree = "<group>"; };
 		066282E41B8D53B100D3E693 /* GMLLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMLLocation.h; sourceTree = "<group>"; };
 		066282E51B8D53B100D3E693 /* GMLLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMLLocation.m; sourceTree = "<group>"; };
 		066282E61B8D53B100D3E693 /* GMLLocationDetailAddressManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMLLocationDetailAddressManager.h; sourceTree = "<group>"; };
@@ -348,6 +350,7 @@
 		066B35311B7B493700F8654A /* Rescoure */ = {
 			isa = PBXGroup;
 			children = (
+				0661B9171B95B39C00D37FFE /* ico_jiahao@2x.png */,
 				066B35321B7B493700F8654A /* 4@2x.png */,
 				066B35331B7B493700F8654A /* bg_kefu@2x.png */,
 				066B35341B7B493700F8654A /* face_cry@2x.png */,
@@ -553,6 +556,7 @@
 				065FED0B1B7C617A00FB8E64 /* QRScan.bundle in Resources */,
 				066B353B1B7B493700F8654A /* 4@2x.png in Resources */,
 				066B353D1B7B493700F8654A /* face_cry@2x.png in Resources */,
+				0661B9181B95B39C00D37FFE /* ico_jiahao@2x.png in Resources */,
 				06BFA4BD1B5799E500C4BCBE /* LaunchScreen.xib in Resources */,
 				066B35411B7B493700F8654A /* qr_bg_inside@2x.png in Resources */,
 				06076E171B7B4A700057930C /* MJRefresh.bundle in Resources */,

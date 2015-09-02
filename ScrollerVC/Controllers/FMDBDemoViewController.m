@@ -11,7 +11,7 @@
 #define dataBasePath [[(NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES)) lastObject]stringByAppendingPathComponent:dataBaseName]
 #define dataBaseName @"GML.sqlite"
 
-@interface FMDBDemoViewController ()
+@interface FMDBDemoViewController ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 {
     FMDatabase *_db;
 }
@@ -24,6 +24,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *ageLab;
 @property (weak, nonatomic) IBOutlet UILabel *genderLab;
 @property (weak, nonatomic) IBOutlet UILabel *desLab;
+@property (weak, nonatomic) IBOutlet UIImageView *myImageView;
+
 
 @end
 
@@ -107,17 +109,21 @@
             NSString *age = [resultSet stringForColumn:@"age"];
             NSString *gender = [resultSet stringForColumn:@"gender"];
             NSString *des = [resultSet stringForColumn:@"description"];
+            NSData *imgeData = [resultSet dataForColumn:@"photo"];
             if (idx==1) {
                 _nameLab.text = name;
                 _ageLab.text = age;
                 _genderLab.text = gender;
                 _desLab.text = des;
+                _myImageView.image = [UIImage imageWithData:imgeData];
                 idx = 0;
             }else{
                 _nameLab.text = @"点击展示";
                 _genderLab.text = @"点击展示";
                 _ageLab.text = @"点击展示";
                 _desLab.text = @"点击展示";
+                _myImageView.image = [UIImage imageNamed:@"ico_jiahao"];
+
                 idx = 1;
             }
         }
@@ -140,7 +146,53 @@
     }
 }
 
+- (IBAction)chooseImage:(id)sender
+{
+    NSLog(@"chooseImage");
+    
+    UIImagePickerController *pickCtrl = [[UIImagePickerController alloc] init];
+    pickCtrl.sourceType =   UIImagePickerControllerSourceTypePhotoLibrary;
+    pickCtrl.allowsEditing = YES;
+    pickCtrl.delegate = self;
+    [self presentViewController:pickCtrl animated:YES completion:nil];
+    
+}
 
+-(void)insertImage:(UIImage *)image
+{
+    FMDatabase *db = [FMDatabase databaseWithPath:dataBasePath];
+    NSData *imageData = UIImagePNGRepresentation(image);
+    if ([db open]) {
+        //判断字段是否存在
+        if ([db columnExists:dataBasePath inTableWithName:@"gml"]) {
+            NSString *sql = [NSString stringWithFormat:@"UPDATE gml  WHERE photo = '%@'",imageData];
+            [db executeUpdate:sql];
+        }else{
+            NSString *sql = [NSString stringWithFormat:@"ALTER TABLE gml ADD photo blob"];
+            [db executeUpdate:sql];
+            NSString *update = [NSString stringWithFormat:@"UPDATE  gml SET photo = ? WHERE id = 8"];
+            [db executeUpdate:update,imageData];
+        }
+    }
+
+   
+    
+}
+#pragma mark --UIImagePickerControllerDelegate ---
+-(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    
+}
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    NSLog(@"info == %@",info);
+    
+    _myImageView.image = [info objectForKey:@"UIImagePickerControllerEditedImage"];
+    [self insertImage:_myImageView.image];
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    
+    
+}
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
