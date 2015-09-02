@@ -8,6 +8,7 @@
 
 #import "DeleteTableViewController.h"
 #import "FMDBDemoViewController.h"
+#import "UserInfoCell.h"
 
 @interface DeleteTableViewController ()
 
@@ -18,10 +19,9 @@
 
 @implementation DeleteTableViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    [super viewDidLoad];
-    _dataArray = [[NSMutableArray alloc] initWithObjects:@"数据11",@"数据12",@"数据13",@"数据14",@"数据15",nil];
 }
 
 #pragma mark - Table view data source
@@ -33,32 +33,24 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    return _dataArray.count;
+    return self.dataArray.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *CellIdentifier = @"Cell";
+    UserInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UserInfoCell"];
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-    }
-    
-    cell.textLabel.text = [_dataArray objectAtIndex:indexPath.row];
     return cell;
 
 }
+
 -(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    FMDBDemoViewController *demoVC = [self.storyboard instantiateViewControllerWithIdentifier:@"FMDBDemoViewController"];
-    self.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:demoVC animated:YES];
+    
+    
 }
 
-
-// Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
 
     return YES;
@@ -78,6 +70,14 @@
 
     
     }
+}
+#pragma mark -- lazy -- 
+-(NSMutableArray *)dataArray
+{
+    if (_dataArray == nil) {
+        _dataArray = [[NSMutableArray alloc] init];
+    }
+    return _dataArray;
 }
 
 

@@ -66,6 +66,8 @@
 		066B355C1B7B498E00F8654A /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 066B35551B7B498E00F8654A /* FirstViewController.m */; };
 		066B355D1B7B498E00F8654A /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 066B35571B7B498E00F8654A /* SecondViewController.m */; };
 		066B355E1B7B498E00F8654A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 066B35591B7B498E00F8654A /* ViewController.m */; };
+		067608FD1B96A2EF009305F1 /* UserInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 067608FB1B96A2EF009305F1 /* UserInfoCell.m */; };
+		067609031B96A9CB009305F1 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 067609021B96A9CB009305F1 /* UserModel.m */; };
 		06BFA4AF1B5799E500C4BCBE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 06BFA4AE1B5799E500C4BCBE /* main.m */; };
 		06BFA4B21B5799E500C4BCBE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 06BFA4B11B5799E500C4BCBE /* AppDelegate.m */; };
 		06BFA4B81B5799E500C4BCBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06BFA4B61B5799E500C4BCBE /* Main.storyboard */; };
@@ -193,6 +195,10 @@
 		066B35571B7B498E00F8654A /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		066B35581B7B498E00F8654A /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		066B35591B7B498E00F8654A /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		067608FA1B96A2EF009305F1 /* UserInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoCell.h; sourceTree = "<group>"; };
+		067608FB1B96A2EF009305F1 /* UserInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoCell.m; sourceTree = "<group>"; };
+		067609011B96A9CB009305F1 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		067609021B96A9CB009305F1 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 		06BFA4A91B5799E500C4BCBE /* ScrollerVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrollerVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06BFA4AD1B5799E500C4BCBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06BFA4AE1B5799E500C4BCBE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -369,6 +375,8 @@
 			children = (
 				066B35451B7B495500F8654A /* GMLCustomAlterView.h */,
 				066B35461B7B495500F8654A /* GMLCustomAlterView.m */,
+				067608FA1B96A2EF009305F1 /* UserInfoCell.h */,
+				067608FB1B96A2EF009305F1 /* UserInfoCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -405,6 +413,15 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		067609001B96A9BE009305F1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				067609011B96A9CB009305F1 /* UserModel.h */,
+				067609021B96A9CB009305F1 /* UserModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		06BFA4A01B5799E500C4BCBE = {
 			isa = PBXGroup;
 			children = (
@@ -427,6 +444,7 @@
 		06BFA4AB1B5799E500C4BCBE /* ScrollerVC */ = {
 			isa = PBXGroup;
 			children = (
+				067609001B96A9BE009305F1 /* Model */,
 				066282E31B8D53AB00D3E693 /* Location */,
 				065FED071B7C617A00FB8E64 /* QRScan */,
 				06076DCB1B7B4A660057930C /* 3lib */,
@@ -608,6 +626,7 @@
 				06076DFA1B7B4A660057930C /* UIImage+MultiFormat.m in Sources */,
 				06076DF31B7B4A660057930C /* SDWebImageDownloader.m in Sources */,
 				066B35471B7B495500F8654A /* GMLCustomAlterView.m in Sources */,
+				067609031B96A9CB009305F1 /* UserModel.m in Sources */,
 				06076DEF1B7B4A660057930C /* NSData+GIF.m in Sources */,
 				06BFA4B21B5799E500C4BCBE /* AppDelegate.m in Sources */,
 				066B355A1B7B498E00F8654A /* AVCaptureDeviceViewController.m in Sources */,
@@ -625,6 +644,7 @@
 				06076DF01B7B4A660057930C /* SDImageCache.m in Sources */,
 				06076E321B7B4DFB0057930C /* FMDatabaseQueue.m in Sources */,
 				06076E311B7B4DFB0057930C /* FMDatabasePool.m in Sources */,
+				067608FD1B96A2EF009305F1 /* UserInfoCell.m in Sources */,
 				065FED0C1B7C617A00FB8E64 /* QRViewController.m in Sources */,
 				06BFA4AF1B5799E500C4BCBE /* main.m in Sources */,
 				066B355B1B7B498E00F8654A /* DeleteTableViewController.m in Sources */,

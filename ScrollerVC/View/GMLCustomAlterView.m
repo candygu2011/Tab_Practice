@@ -17,7 +17,6 @@
 
 
 
-
 @implementation GMLCustomAlterView
 
 -(instancetype)initWithFrame:(CGRect)frame style:(GMLCustomAlterViewStyle)style
