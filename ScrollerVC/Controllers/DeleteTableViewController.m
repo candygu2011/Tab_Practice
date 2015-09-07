@@ -9,6 +9,7 @@
 #import "DeleteTableViewController.h"
 #import "FMDBDemoViewController.h"
 #import "UserInfoCell.h"
+#import "ScrollViewController.h"
 
 @interface DeleteTableViewController ()
 
@@ -26,7 +27,8 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
 
     return 1;
 }
@@ -40,7 +42,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     UserInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UserInfoCell"];
-    
+    cell.nameLab.text = _dataArray[indexPath.row];
     return cell;
 
 }
@@ -48,7 +50,9 @@
 -(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    
+    if (indexPath.row == 0) {
+        [self.navigationController pushViewController:[[ScrollViewController alloc] init] animated:YES];
+    }
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -76,6 +80,7 @@
 {
     if (_dataArray == nil) {
         _dataArray = [[NSMutableArray alloc] init];
+        [_dataArray addObject:@"scrollView "];
     }
     return _dataArray;
 }

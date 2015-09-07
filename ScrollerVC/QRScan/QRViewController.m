@@ -165,7 +165,8 @@
         [_session startRunning];
     });
 }
-- (void)deviceIsNotSupport{
+- (void)deviceIsNotSupport
+{
     //判断是不是允许访问相机
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"" message:@"请在系统设置中开启相机（设置>隐私>相机>开启XXX）" delegate:self cancelButtonTitle:@"知道了" otherButtonTitles:nil, nil];
     [alertView show];

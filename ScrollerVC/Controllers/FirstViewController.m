@@ -9,6 +9,7 @@
 #import "FirstViewController.h"
 #import "UIImageView+WebCache.h"
 #import "GMLCustomAlterView.h"
+#import "ScrollViewController.h"
 @interface FirstViewController ()
 //剩余票数
 @property(nonatomic,assign) int leftTicketsCount;
@@ -170,6 +171,9 @@
     
 }
 
+- (IBAction)soundButton:(id)sender {
+    [self.navigationController pushViewController:[[ScrollViewController alloc] init] animated:YES];
+}
 
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
