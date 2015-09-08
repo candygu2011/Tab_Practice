@@ -68,6 +68,11 @@
 		066B355E1B7B498E00F8654A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 066B35591B7B498E00F8654A /* ViewController.m */; };
 		067608FD1B96A2EF009305F1 /* UserInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 067608FB1B96A2EF009305F1 /* UserInfoCell.m */; };
 		067609031B96A9CB009305F1 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 067609021B96A9CB009305F1 /* UserModel.m */; };
+		0693CAEB1B9EDFF300A5C887 /* NLMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0693CAE41B9EDFF300A5C887 /* NLMainTableViewController.m */; };
+		0693CAEC1B9EDFF300A5C887 /* NLPullDownRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0693CAE61B9EDFF300A5C887 /* NLPullDownRefreshView.m */; };
+		0693CAED1B9EDFF300A5C887 /* NLPullUpRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0693CAE81B9EDFF300A5C887 /* NLPullUpRefreshView.m */; };
+		0693CAEE1B9EDFF300A5C887 /* NLSubTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0693CAEA1B9EDFF300A5C887 /* NLSubTableViewController.m */; };
+		0693CAF01B9EE00B00A5C887 /* icon_xiala.png in Resources */ = {isa = PBXBuildFile; fileRef = 0693CAEF1B9EE00B00A5C887 /* icon_xiala.png */; };
 		06942A7A1B9D75B400997925 /* BTVPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06942A791B9D75B400997925 /* BTVPageViewController.m */; };
 		06942A881B9D7C8E00997925 /* CDAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 06942A801B9D7C8E00997925 /* CDAudioManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		06942A891B9D7C8E00997925 /* CDOpenALSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 06942A831B9D7C8E00997925 /* CDOpenALSupport.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -206,6 +211,15 @@
 		067608FB1B96A2EF009305F1 /* UserInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoCell.m; sourceTree = "<group>"; };
 		067609011B96A9CB009305F1 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
 		067609021B96A9CB009305F1 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
+		0693CAE31B9EDFF300A5C887 /* NLMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLMainTableViewController.h; sourceTree = "<group>"; };
+		0693CAE41B9EDFF300A5C887 /* NLMainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLMainTableViewController.m; sourceTree = "<group>"; };
+		0693CAE51B9EDFF300A5C887 /* NLPullDownRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLPullDownRefreshView.h; sourceTree = "<group>"; };
+		0693CAE61B9EDFF300A5C887 /* NLPullDownRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLPullDownRefreshView.m; sourceTree = "<group>"; };
+		0693CAE71B9EDFF300A5C887 /* NLPullUpRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLPullUpRefreshView.h; sourceTree = "<group>"; };
+		0693CAE81B9EDFF300A5C887 /* NLPullUpRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLPullUpRefreshView.m; sourceTree = "<group>"; };
+		0693CAE91B9EDFF300A5C887 /* NLSubTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLSubTableViewController.h; sourceTree = "<group>"; };
+		0693CAEA1B9EDFF300A5C887 /* NLSubTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLSubTableViewController.m; sourceTree = "<group>"; };
+		0693CAEF1B9EE00B00A5C887 /* icon_xiala.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_xiala.png; sourceTree = "<group>"; };
 		06942A781B9D75B400997925 /* BTVPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTVPageViewController.h; sourceTree = "<group>"; };
 		06942A791B9D75B400997925 /* BTVPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTVPageViewController.m; sourceTree = "<group>"; };
 		06942A7F1B9D7C8E00997925 /* CDAudioManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDAudioManager.h; sourceTree = "<group>"; };
@@ -255,6 +269,7 @@
 		06076DCB1B7B4A660057930C /* 3lib */ = {
 			isa = PBXGroup;
 			children = (
+				0693CAE21B9EDFF300A5C887 /* NLBouncePagination */,
 				06942A7E1B9D7C8E00997925 /* Cocos2dDension */,
 				06942A771B9D75B400997925 /* PageView */,
 				06076E231B7B4DFB0057930C /* fmdb */,
@@ -379,6 +394,7 @@
 		066B35311B7B493700F8654A /* Rescoure */ = {
 			isa = PBXGroup;
 			children = (
+				0693CAEF1B9EE00B00A5C887 /* icon_xiala.png */,
 				06942A8C1B9D7C9F00997925 /* TroubleMaker.mp3 */,
 				0661B9171B95B39C00D37FFE /* ico_jiahao@2x.png */,
 				066B35321B7B493700F8654A /* 4@2x.png */,
@@ -446,6 +462,21 @@
 				067609021B96A9CB009305F1 /* UserModel.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		0693CAE21B9EDFF300A5C887 /* NLBouncePagination */ = {
+			isa = PBXGroup;
+			children = (
+				0693CAE31B9EDFF300A5C887 /* NLMainTableViewController.h */,
+				0693CAE41B9EDFF300A5C887 /* NLMainTableViewController.m */,
+				0693CAE51B9EDFF300A5C887 /* NLPullDownRefreshView.h */,
+				0693CAE61B9EDFF300A5C887 /* NLPullDownRefreshView.m */,
+				0693CAE71B9EDFF300A5C887 /* NLPullUpRefreshView.h */,
+				0693CAE81B9EDFF300A5C887 /* NLPullUpRefreshView.m */,
+				0693CAE91B9EDFF300A5C887 /* NLSubTableViewController.h */,
+				0693CAEA1B9EDFF300A5C887 /* NLSubTableViewController.m */,
+			);
+			path = NLBouncePagination;
 			sourceTree = "<group>";
 		};
 		06942A771B9D75B400997925 /* PageView */ = {
@@ -631,6 +662,7 @@
 				06076E171B7B4A700057930C /* MJRefresh.bundle in Resources */,
 				066B35431B7B493700F8654A /* touxiang@2x.png in Resources */,
 				066B35401B7B493700F8654A /* qr_bg_in2@2x.png in Resources */,
+				0693CAF01B9EE00B00A5C887 /* icon_xiala.png in Resources */,
 				06942A8D1B9D7C9F00997925 /* TroubleMaker.mp3 in Resources */,
 				066B35421B7B493700F8654A /* qr_bg_out@2x.png in Resources */,
 				066B353C1B7B493700F8654A /* bg_kefu@2x.png in Resources */,
@@ -656,6 +688,7 @@
 				06942A8A1B9D7C8E00997925 /* CocosDenshion.m in Sources */,
 				06076DF91B7B4A660057930C /* UIImage+GIF.m in Sources */,
 				06076E2F1B7B4DFB0057930C /* FMDatabase.m in Sources */,
+				0693CAEB1B9EDFF300A5C887 /* NLMainTableViewController.m in Sources */,
 				066B355D1B7B498E00F8654A /* SecondViewController.m in Sources */,
 				06076DF71B7B4A660057930C /* SDWebImagePrefetcher.m in Sources */,
 				06076DEE1B7B4A660057930C /* MKAnnotationView+WebCache.m in Sources */,
@@ -667,6 +700,7 @@
 				066B355E1B7B498E00F8654A /* ViewController.m in Sources */,
 				06076E1F1B7B4A700057930C /* MJRefreshLegendHeader.m in Sources */,
 				06076E201B7B4A700057930C /* UIScrollView+MJExtension.m in Sources */,
+				0693CAEE1B9EDFF300A5C887 /* NLSubTableViewController.m in Sources */,
 				066B354D1B7B496D00F8654A /* UIView+Additional.m in Sources */,
 				06076DFC1B7B4A660057930C /* UIImageView+MJWebCache.m in Sources */,
 				06076DF81B7B4A660057930C /* UIButton+WebCache.m in Sources */,
@@ -676,6 +710,7 @@
 				06076DF21B7B4A660057930C /* SDWebImageDecoder.m in Sources */,
 				06076E221B7B4A700057930C /* UIView+MJExtension.m in Sources */,
 				06076DF41B7B4A660057930C /* SDWebImageDownloaderOperation.m in Sources */,
+				0693CAED1B9EDFF300A5C887 /* NLPullUpRefreshView.m in Sources */,
 				06942A8B1B9D7C8E00997925 /* SimpleAudioEngine.m in Sources */,
 				06076DFD1B7B4A660057930C /* UIImageView+WebCache.m in Sources */,
 				06076DFA1B7B4A660057930C /* UIImage+MultiFormat.m in Sources */,
@@ -694,6 +729,7 @@
 				06076DF61B7B4A660057930C /* SDWebImageManager.m in Sources */,
 				066282EC1B8D53B100D3E693 /* GMLLocationManager.m in Sources */,
 				06076E181B7B4A700057930C /* MJRefreshComponent.m in Sources */,
+				0693CAEC1B9EDFF300A5C887 /* NLPullDownRefreshView.m in Sources */,
 				06076E191B7B4A700057930C /* MJRefreshConst.m in Sources */,
 				06076E1D1B7B4A700057930C /* MJRefreshHeader.m in Sources */,
 				06076E1B1B7B4A700057930C /* MJRefreshGifFooter.m in Sources */,
