@@ -67,6 +67,7 @@
 		066B355E1B7B498E00F8654A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 066B35591B7B498E00F8654A /* ViewController.m */; };
 		067274A51BABAEC000DB02F9 /* GMLMusicTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 067274A41BABAEC000DB02F9 /* GMLMusicTableViewController.m */; };
 		067274A71BABB87A00DB02F9 /* 原来你也在这里.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 067274A61BABB87A00DB02F9 /* 原来你也在这里.mp3 */; };
+		067274AA1BABE72F00DB02F9 /* GMLMPMediaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 067274A91BABE72F00DB02F9 /* GMLMPMediaViewController.m */; };
 		067608FD1B96A2EF009305F1 /* UserInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 067608FB1B96A2EF009305F1 /* UserInfoCell.m */; };
 		067609031B96A9CB009305F1 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 067609021B96A9CB009305F1 /* UserModel.m */; };
 		06928F1F1BA6B8A0008CB4F3 /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06928F1E1BA6B8A0008CB4F3 /* DrawView.m */; };
@@ -210,6 +211,8 @@
 		067274A31BABAEC000DB02F9 /* GMLMusicTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMLMusicTableViewController.h; sourceTree = "<group>"; };
 		067274A41BABAEC000DB02F9 /* GMLMusicTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMLMusicTableViewController.m; sourceTree = "<group>"; };
 		067274A61BABB87A00DB02F9 /* 原来你也在这里.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "原来你也在这里.mp3"; sourceTree = "<group>"; };
+		067274A81BABE72F00DB02F9 /* GMLMPMediaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMLMPMediaViewController.h; sourceTree = "<group>"; };
+		067274A91BABE72F00DB02F9 /* GMLMPMediaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMLMPMediaViewController.m; sourceTree = "<group>"; };
 		067608FA1B96A2EF009305F1 /* UserInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoCell.h; sourceTree = "<group>"; };
 		067608FB1B96A2EF009305F1 /* UserInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoCell.m; sourceTree = "<group>"; };
 		067609011B96A9CB009305F1 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
@@ -474,6 +477,8 @@
 			children = (
 				067274A31BABAEC000DB02F9 /* GMLMusicTableViewController.h */,
 				067274A41BABAEC000DB02F9 /* GMLMusicTableViewController.m */,
+				067274A81BABE72F00DB02F9 /* GMLMPMediaViewController.h */,
+				067274A91BABE72F00DB02F9 /* GMLMPMediaViewController.m */,
 			);
 			path = Music;
 			sourceTree = "<group>";
@@ -761,6 +766,7 @@
 				06076DEF1B7B4A660057930C /* NSData+GIF.m in Sources */,
 				06BFA4B21B5799E500C4BCBE /* AppDelegate.m in Sources */,
 				066B355A1B7B498E00F8654A /* AVCaptureDeviceViewController.m in Sources */,
+				067274AA1BABE72F00DB02F9 /* GMLMPMediaViewController.m in Sources */,
 				06076E1E1B7B4A700057930C /* MJRefreshLegendFooter.m in Sources */,
 				06076DFB1B7B4A660057930C /* UIImage+WebP.m in Sources */,
 				06076E1A1B7B4A700057930C /* MJRefreshFooter.m in Sources */,
