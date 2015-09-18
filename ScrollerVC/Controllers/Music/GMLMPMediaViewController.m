@@ -17,6 +17,7 @@
  *  音乐播放器
  */
 @property (nonatomic,strong) MPMusicPlayerController *musicPicker;
+@property (nonatomic,strong) MPVolumeView *volumeView ;
 
 @end
 
@@ -29,7 +30,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    MPVolumeView *volumeView = [ [MPVolumeView alloc] init];
+    volumeView.frame=CGRectMake(47, self.view.bounds.size.height-64-30, 227, 23);
+    [volumeView setShowsVolumeSlider:YES];
+    [volumeView setShowsRouteButton:YES];
+    [volumeView sizeToFit];
+    [self.view addSubview:volumeView];
+    self.volumeView = volumeView;
+    
+  
 }
 
 #pragma mark -- layz --
@@ -148,6 +157,39 @@
 }
 - (IBAction)prevClick:(id)sender {
     [self.musicPicker skipToPreviousItem];
+}
+- (IBAction)addVolume:(id)sender {
+    UISlider* volumeViewSlider = nil;
+    for (UIView *view in [self.volumeView subviews]){
+        if ([view.class.description isEqualToString:@"MPVolumeSlider"]){
+            volumeViewSlider = (UISlider*)view;
+            break;
+        }
+    }
+    
+    float systemVolume = volumeViewSlider.value;
+    systemVolume += 0.2f;
+    NSLog(@"sys = %f",systemVolume);
+    [volumeViewSlider setValue:systemVolume animated:NO];
+    
+    [volumeViewSlider sendActionsForControlEvents:UIControlEventTouchUpInside];
+}
+
+- (IBAction)reduceVolume:(id)sender {
+    
+    UISlider* volumeViewSlider = nil;
+    for (UIView *view in [self.volumeView subviews]){
+        if ([view.class.description isEqualToString:@"MPVolumeSlider"]){
+            volumeViewSlider = (UISlider*)view;
+            break;
+        }
+    }
+    float systemVolume = volumeViewSlider.value;
+    NSLog(@"sys = %f",systemVolume);
+    systemVolume -= 0.2f;
+    [volumeViewSlider setValue:systemVolume animated:NO];
+    
+    [volumeViewSlider sendActionsForControlEvents:UIControlEventTouchUpInside];
 }
 
 @end
