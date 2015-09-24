@@ -8,6 +8,8 @@
 
 #import "SecondViewController.h"
 #import "DrawView.h"
+#import "GMLCircleView.h"
+#import "UIView+Additional.h"
 
 //颜色与随机颜色
 #define kRGBColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
@@ -15,6 +17,7 @@
 @interface SecondViewController ()
 @property (nonatomic,strong) CALayer *layer;
 @property (nonatomic,strong) UIView *containerView;
+
 
 
 @end
@@ -31,6 +34,8 @@
 //    [self.view addSubview:drawView];
     
 //    [self emitterTtest];
+    
+//    [self drawCircleView];
 }
 /**
  *  火焰效果
@@ -110,5 +115,53 @@
     [self.view.layer addSublayer:dotteShapeLayer];
     
 }
+
+- (void)drawCircleView
+{
+    CGRect frame = CGRectMake(0, 50, 400, 400);
+    GMLCircleView *circleView = [[GMLCircleView alloc] initWithFrame:frame arcWidth:100 current:1 total:1];
+    circleView.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:circleView];
+    NSLog(@"%@",NSStringFromCGPoint(circleView.center));
+    UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(20, 20, 200, 200)];
+    imgView.image = [UIImage imageNamed:@"bg_kefu@2x"];
+    imgView.center = CGPointMake(circleView.center.x, circleView.center.y-50);
+    [circleView addSubview:imgView];
+    imgView.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction:)];
+    [imgView addGestureRecognizer:tap];
+    
+}
+
+- (void)tapAction:(UITapGestureRecognizer *)tap
+{
+    CABasicAnimation* rotationAnimation;
+    rotationAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+    rotationAnimation.toValue = [NSNumber numberWithFloat: M_PI * 2.0 ];
+    [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    rotationAnimation.duration = 5;
+    rotationAnimation.repeatCount = MAXFLOAT;//你可以设置到最大的整数值
+    rotationAnimation.cumulative = NO;
+    rotationAnimation.removedOnCompletion = NO;
+    rotationAnimation.fillMode = kCAFillModeForwards;
+    [tap.view.layer addAnimation:rotationAnimation forKey:@"Rotation"];
+    
+}
+-(CABasicAnimation *)rotation:(float)dur degree:(float)degree direction:(int)direction repeatCount:(int)repeatCount
+{
+    CATransform3D rotationTransform = CATransform3DMakeRotation(degree, 0, 0, direction);
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform"];
+    animation.toValue = [NSValue valueWithCATransform3D:rotationTransform];
+    animation.duration  =  dur;
+    animation.autoreverses = NO;
+    animation.cumulative = NO;
+    animation.fillMode = kCAFillModeForwards;
+    animation.repeatCount = repeatCount;
+    animation.delegate = self;
+    
+    return animation;
+    
+}
+
 
 @end

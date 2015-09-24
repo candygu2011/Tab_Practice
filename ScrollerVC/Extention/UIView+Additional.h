@@ -151,6 +151,7 @@
  */
 - (void)backgroundColorAnimationOnlayerColor:(UIColor *)color toColor:(UIColor *)toColor;
 
+
 @property (nonatomic, copy) NSObject *attachment; //在视图中附加一个绑定数据
 
 @end

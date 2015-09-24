@@ -8,6 +8,10 @@
 
 #import "GMLMusicTableViewController.h"
 #import <AVFoundation/AVFoundation.h>
+#import "GMLCircleView.h"
+#import "GMLSliderPopover.h"
+#import "GMLPopover.h"
+#import "UIView+Additional.h"
 #define kMusicFile @"原来你也在这里.mp3"
 #define kMusicSinger @"刘若英"
 #define kMusicTitle @"原来你也在这里"
@@ -17,11 +21,16 @@
 }
 @property (weak, nonatomic) IBOutlet UILabel *titleLab;
 @property (nonatomic,strong) AVAudioPlayer *audioPlayer;//播放器
-@property (weak, nonatomic) IBOutlet UIProgressView *playProgress;//播放进度
-@property (weak, nonatomic) IBOutlet UILabel *musicSinger; //演唱者
+@property (weak, nonatomic) IBOutlet GMLSliderPopover *silder;
+
 @property (weak, nonatomic) IBOutlet UIButton *playOrPause; //播放/暂停按钮(如果tag为0认为是暂停状态，1是播放状态)
 
 @property (weak ,nonatomic) NSTimer *timer;//进度更新定时器
+
+
+@property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *playNeedleImageView;
+
 
 
 @end
@@ -46,8 +55,42 @@
  *  初始化UI
  */
 -(void)setupUI{
-    self.title=kMusicTitle;
-    self.musicSinger.text=kMusicSinger;
+    
+    self.titleLab.text=[kMusicTitle stringByAppendingString:[NSString stringWithFormat:@"--%@",kMusicSinger]];
+    
+//    [self drawCircleView];
+}
+
+- (void)drawCircleView
+{
+    CGRect frame = CGRectMake(0, 50, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.width);
+    GMLCircleView *circleView = [[GMLCircleView alloc] initWithFrame:frame arcWidth:100 current:1 total:1];
+    circleView.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:circleView];
+    NSLog(@"%@",NSStringFromCGPoint(circleView.center));
+    UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 20, 200, 200)];
+    imgView.image = [UIImage imageNamed:@"bg_kefu@2x"];
+    imgView.center = CGPointMake(circleView.center.x, circleView.center.y-50);
+    [circleView addSubview:imgView];
+    imgView.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction:)];
+    [imgView addGestureRecognizer:tap];
+    
+}
+
+- (void)tapAction:(UITapGestureRecognizer *)tap
+{
+    CABasicAnimation* rotationAnimation;
+    rotationAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+    rotationAnimation.toValue = [NSNumber numberWithFloat: M_PI * 2.0 ];
+    [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    rotationAnimation.duration = 5;
+    rotationAnimation.repeatCount = MAXFLOAT;//你可以设置到最大的整数值
+    rotationAnimation.cumulative = NO;
+    rotationAnimation.removedOnCompletion = NO;
+    rotationAnimation.fillMode = kCAFillModeForwards;
+    [tap.view.layer addAnimation:rotationAnimation forKey:@"Rotation"];
+    
 }
 
 -(AVAudioPlayer *)audioPlayer
@@ -57,7 +100,7 @@
         NSURL *url = [NSURL fileURLWithPath:urlStr];
         NSError *error = nil;
         _audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
-        _audioPlayer.numberOfLoops = 0;
+        _audioPlayer.numberOfLoops = -1;
         _audioPlayer.delegate = self;
         [_audioPlayer prepareToPlay];
         if (error) {
@@ -111,6 +154,11 @@
         [self.audioPlayer play];
         self.timer.fireDate=[NSDate distantPast];//恢复定时器
     }
+    
+    [self needleAnimation];
+    [self iconRotation];
+
+
 }
 
 /**
@@ -122,6 +170,8 @@
         self.timer.fireDate=[NSDate distantFuture];//暂停定时器，注意不能调用invalidate方法，此方法会取消，之后无法恢复
         
     }
+    
+    [self needleStopAnimation];
 }
 
 /**
@@ -129,7 +179,8 @@
  */
 -(void)updateProgress{
     float progress= self.audioPlayer.currentTime /self.audioPlayer.duration;
-    [self.playProgress setProgress:progress animated:true];
+    [self.silder setValue:progress animated:YES];
+    self.silder.popover.textLab.text = [NSString stringWithFormat:@"%.2f",progress];
 }
 - (IBAction)playClick:(UIButton *)sender
 {
@@ -140,8 +191,56 @@
         sender.tag=1;
         [self play];
     }
+
+}
+
+- (void)iconRotation
+{
+    
+    CABasicAnimation* rotationAnimation;
+    rotationAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+    rotationAnimation.toValue = [NSNumber numberWithFloat: M_PI * 2.0 ];
+    [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    rotationAnimation.duration = 5;
+    rotationAnimation.repeatCount = MAXFLOAT;//你可以设置到最大的整数值
+    rotationAnimation.cumulative = NO;
+    rotationAnimation.removedOnCompletion = NO;
+    rotationAnimation.fillMode = kCAFillModeForwards;
+    [self.iconImageView.layer addAnimation:rotationAnimation forKey:@"Rotation"];
+    
     
 }
+
+- (void)needleAnimation
+{
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+    animation.toValue = [NSNumber numberWithFloat:M_PI * 0.2];
+    [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+    animation.duration = 0.5;
+    animation.repeatCount = 1;//你可以设置到最大的整数值
+    animation.cumulative = YES;
+    animation.removedOnCompletion = NO;
+    animation.fillMode = kCAFillModeForwards;
+    [self.playNeedleImageView.layer addAnimation:animation forKey:@"Rotation"];
+
+    
+}
+- (void)needleStopAnimation
+{
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+    animation.toValue = [NSNumber numberWithFloat:-M_PI * 0.2];
+    [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+    animation.duration = 0.5;
+    animation.repeatCount = 1;//你可以设置到最大的整数值
+    animation.cumulative = YES;
+    animation.removedOnCompletion = NO;
+    animation.fillMode = kCAFillModeForwards;
+    [self.playNeedleImageView.layer addAnimation:animation forKey:@"Rotation"];
+    
+    
+}
+
+
 
 #pragma mark - 播放器代理方法
 -(void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag

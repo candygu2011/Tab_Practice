@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5Fx-iC-87E">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5Fx-iC-87E">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--选项卡-->
@@ -261,24 +263,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JPa-j6-mCT">
-                                <rect key="frame" x="0.0" y="528" width="600" height="2"/>
-                            </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hj1-RU-n1V">
                                 <rect key="frame" x="180" y="30" width="219" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="219" id="0RO-zs-Bga"/>
                                     <constraint firstAttribute="height" constant="34" id="MpR-vf-xvu"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="singer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jnx-O5-tK0">
-                                <rect key="frame" x="20" y="474" width="173" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="Ip0-FE-SoF"/>
-                                    <constraint firstAttribute="width" constant="173" id="NUg-bI-ehE"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -297,24 +286,59 @@
                                     <action selector="playClick:" destination="7Fe-bC-Amr" eventType="touchUpInside" id="0VY-Gc-PVr"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play_disc.png" translatesAutoresizingMaskIntoConstraints="NO" id="NzF-B6-ftq">
+                                <rect key="frame" x="150" y="140" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="Kzg-2P-pxL"/>
+                                    <constraint firstAttribute="width" constant="300" id="NHf-1f-BAJ"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icn_nomusic.png" translatesAutoresizingMaskIntoConstraints="NO" id="fW6-67-AIg">
+                                <rect key="frame" x="199" y="189" width="205" height="205"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="205" id="VXD-pN-7wv"/>
+                                    <constraint firstAttribute="width" constant="205" id="jzI-Mv-mgt"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play_needle.png" translatesAutoresizingMaskIntoConstraints="NO" id="44A-7y-Yn5">
+                                <rect key="frame" x="364" y="60" width="110" height="178"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="2O8-NV-iMC"/>
+                                    <constraint firstAttribute="height" constant="178" id="aSX-d2-NV3"/>
+                                </constraints>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="0EX-02-u0L" customClass="GMLSliderPopover">
+                                <rect key="frame" x="-2" y="505" width="604" height="31"/>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="JPa-j6-mCT" firstAttribute="top" secondItem="jnx-O5-tK0" secondAttribute="bottom" constant="20" id="302-IE-YUN"/>
+                            <constraint firstItem="44A-7y-Yn5" firstAttribute="leadingMargin" relation="greaterThanOrEqual" secondItem="NzF-B6-ftq" secondAttribute="trailing" constant="-86" id="44Y-lu-jWJ"/>
+                            <constraint firstItem="TYD-mg-8VE" firstAttribute="top" secondItem="0EX-02-u0L" secondAttribute="bottom" constant="15" id="72L-8S-fe8"/>
+                            <constraint firstItem="0EX-02-u0L" firstAttribute="leading" secondItem="nWA-By-xZq" secondAttribute="leading" id="7NT-xe-P6P"/>
+                            <constraint firstAttribute="centerY" secondItem="fW6-67-AIg" secondAttribute="centerY" constant="8" id="CRF-G8-RmZ"/>
                             <constraint firstItem="ceM-ym-a7y" firstAttribute="top" secondItem="TYD-mg-8VE" secondAttribute="bottom" constant="20" id="IBT-EN-UQg"/>
+                            <constraint firstAttribute="centerY" secondItem="NzF-B6-ftq" secondAttribute="centerY" constant="10" id="IZ1-7T-xc2"/>
                             <constraint firstItem="Hj1-RU-n1V" firstAttribute="top" secondItem="ltn-8U-jsd" secondAttribute="bottom" constant="10" id="T9a-yB-JNd"/>
-                            <constraint firstItem="TYD-mg-8VE" firstAttribute="top" secondItem="JPa-j6-mCT" secondAttribute="bottom" constant="20" id="cim-X6-vg8"/>
-                            <constraint firstItem="jnx-O5-tK0" firstAttribute="leading" secondItem="nWA-By-xZq" secondAttribute="leading" constant="20" id="mlz-s9-d0p"/>
-                            <constraint firstAttribute="trailing" secondItem="JPa-j6-mCT" secondAttribute="trailing" id="nfx-28-aT2"/>
+                            <constraint firstAttribute="trailing" secondItem="0EX-02-u0L" secondAttribute="trailing" id="bfc-xD-9q9"/>
+                            <constraint firstAttribute="centerX" secondItem="fW6-67-AIg" secondAttribute="centerX" constant="-1" id="g1c-18-m6g"/>
+                            <constraint firstAttribute="centerX" secondItem="NzF-B6-ftq" secondAttribute="centerX" id="jNM-de-p0d"/>
+                            <constraint firstItem="44A-7y-Yn5" firstAttribute="leading" secondItem="NzF-B6-ftq" secondAttribute="leading" constant="214" id="mY2-PA-kUx"/>
+                            <constraint firstItem="NzF-B6-ftq" firstAttribute="top" secondItem="44A-7y-Yn5" secondAttribute="bottom" constant="-98" id="qk5-ff-7eD"/>
                             <constraint firstAttribute="centerX" secondItem="TYD-mg-8VE" secondAttribute="centerX" constant="-9.5" id="qzv-dE-te8"/>
-                            <constraint firstItem="JPa-j6-mCT" firstAttribute="leading" secondItem="nWA-By-xZq" secondAttribute="leading" id="wQl-dd-bow"/>
                             <constraint firstAttribute="centerX" secondItem="Hj1-RU-n1V" secondAttribute="centerX" constant="10.5" id="z4r-Ld-oS1"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="musicSinger" destination="jnx-O5-tK0" id="Zuk-Pt-J1w"/>
+                        <outlet property="iconImageView" destination="fW6-67-AIg" id="ytH-K4-G2d"/>
+                        <outlet property="playNeedleImageView" destination="44A-7y-Yn5" id="hRH-aS-4ad"/>
                         <outlet property="playOrPause" destination="TYD-mg-8VE" id="0dn-zc-9BA"/>
-                        <outlet property="playProgress" destination="JPa-j6-mCT" id="16H-b4-qrR"/>
+                        <outlet property="silder" destination="0EX-02-u0L" id="4dh-tb-19x"/>
                         <outlet property="titleLab" destination="Hj1-RU-n1V" id="yuK-4O-8wH"/>
                     </connections>
                 </viewController>
@@ -887,7 +911,10 @@
     </scenes>
     <resources>
         <image name="bg_kefu.png" width="142" height="142"/>
+        <image name="icn_nomusic.png" width="565" height="456"/>
         <image name="ico_jiahao.png" width="120" height="120"/>
         <image name="pic.jpg" width="1440" height="900"/>
+        <image name="play_disc.png" width="813" height="813"/>
+        <image name="play_needle.png" width="292" height="472"/>
     </resources>
 </document>
