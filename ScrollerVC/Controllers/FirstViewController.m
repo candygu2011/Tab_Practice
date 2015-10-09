@@ -10,6 +10,7 @@
 #import "UIImageView+WebCache.h"
 #import "GMLCustomAlterView.h"
 #import "ScrollViewController.h"
+#import "HairGlassViewController.h"
 @interface FirstViewController ()
 //剩余票数
 @property(nonatomic,assign) int leftTicketsCount;
@@ -175,12 +176,13 @@
     [self.navigationController pushViewController:[[ScrollViewController alloc] init] animated:YES];
 }
 
-
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-{
-
+- (IBAction)showHairGlass:(UIButton *)sender {
     
+    HairGlassViewController *hairVC = [[HairGlassViewController alloc] initWithNibName:@"HairGlassViewController" bundle:nil];
+    self.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:hairVC animated:YES];
 }
+
 
 @end
 
