@@ -71,6 +71,10 @@
 		067608FD1B96A2EF009305F1 /* UserInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 067608FB1B96A2EF009305F1 /* UserInfoCell.m */; };
 		067609031B96A9CB009305F1 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 067609021B96A9CB009305F1 /* UserModel.m */; };
 		068B62C61BB249BF00315FB2 /* GMLDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = 068B62C51BB249BF00315FB2 /* GMLDataService.m */; };
+		068E45831BB4E668004A2CF0 /* loading1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 068E45811BB4E668004A2CF0 /* loading1@2x.png */; };
+		068E45841BB4E668004A2CF0 /* loading2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 068E45821BB4E668004A2CF0 /* loading2@2x.png */; };
+		068E45881BB527BF004A2CF0 /* HairGlassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 068E45861BB527BF004A2CF0 /* HairGlassViewController.m */; };
+		068E45891BB527BF004A2CF0 /* HairGlassViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 068E45871BB527BF004A2CF0 /* HairGlassViewController.xib */; };
 		06928F1F1BA6B8A0008CB4F3 /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06928F1E1BA6B8A0008CB4F3 /* DrawView.m */; };
 		0693CAEB1B9EDFF300A5C887 /* NLMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0693CAE41B9EDFF300A5C887 /* NLMainTableViewController.m */; };
 		0693CAEC1B9EDFF300A5C887 /* NLPullDownRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0693CAE61B9EDFF300A5C887 /* NLPullDownRefreshView.m */; };
@@ -83,6 +87,8 @@
 		06942A8A1B9D7C8E00997925 /* CocosDenshion.m in Sources */ = {isa = PBXBuildFile; fileRef = 06942A851B9D7C8E00997925 /* CocosDenshion.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		06942A8B1B9D7C8E00997925 /* SimpleAudioEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 06942A871B9D7C8E00997925 /* SimpleAudioEngine.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		06942A901B9D7DC000997925 /* ScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06942A8F1B9D7DC000997925 /* ScrollViewController.m */; };
+		06B3265E1BC7A6AD00FA29A0 /* BaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B3265D1BC7A6AD00FA29A0 /* BaseNavigationViewController.m */; settings = {ASSET_TAGS = (); }; };
+		06B326631BC7AA0700FA29A0 /* AnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B326621BC7AA0700FA29A0 /* AnimationViewController.m */; settings = {ASSET_TAGS = (); }; };
 		06BFA4AF1B5799E500C4BCBE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 06BFA4AE1B5799E500C4BCBE /* main.m */; };
 		06BFA4B21B5799E500C4BCBE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 06BFA4B11B5799E500C4BCBE /* AppDelegate.m */; };
 		06BFA4B81B5799E500C4BCBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06BFA4B61B5799E500C4BCBE /* Main.storyboard */; };
@@ -233,6 +239,11 @@
 		067609021B96A9CB009305F1 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 		068B62C41BB249BF00315FB2 /* GMLDataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GMLDataService.h; path = ScrollerVC/GMLDataService.h; sourceTree = SOURCE_ROOT; };
 		068B62C51BB249BF00315FB2 /* GMLDataService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GMLDataService.m; path = ScrollerVC/GMLDataService.m; sourceTree = SOURCE_ROOT; };
+		068E45811BB4E668004A2CF0 /* loading1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loading1@2x.png"; sourceTree = "<group>"; };
+		068E45821BB4E668004A2CF0 /* loading2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loading2@2x.png"; sourceTree = "<group>"; };
+		068E45851BB527BF004A2CF0 /* HairGlassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HairGlassViewController.h; sourceTree = "<group>"; };
+		068E45861BB527BF004A2CF0 /* HairGlassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HairGlassViewController.m; sourceTree = "<group>"; };
+		068E45871BB527BF004A2CF0 /* HairGlassViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HairGlassViewController.xib; sourceTree = "<group>"; };
 		06928F1D1BA6B8A0008CB4F3 /* DrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawView.h; sourceTree = "<group>"; };
 		06928F1E1BA6B8A0008CB4F3 /* DrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawView.m; sourceTree = "<group>"; };
 		0693CAE31B9EDFF300A5C887 /* NLMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLMainTableViewController.h; sourceTree = "<group>"; };
@@ -257,6 +268,10 @@
 		06942A871B9D7C8E00997925 /* SimpleAudioEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleAudioEngine.m; sourceTree = "<group>"; };
 		06942A8E1B9D7DC000997925 /* ScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewController.h; sourceTree = "<group>"; };
 		06942A8F1B9D7DC000997925 /* ScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewController.m; sourceTree = "<group>"; };
+		06B3265C1BC7A6AD00FA29A0 /* BaseNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationViewController.h; sourceTree = "<group>"; };
+		06B3265D1BC7A6AD00FA29A0 /* BaseNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationViewController.m; sourceTree = "<group>"; };
+		06B326611BC7AA0700FA29A0 /* AnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationViewController.h; sourceTree = "<group>"; };
+		06B326621BC7AA0700FA29A0 /* AnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationViewController.m; sourceTree = "<group>"; };
 		06BFA4A91B5799E500C4BCBE /* ScrollerVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrollerVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06BFA4AD1B5799E500C4BCBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06BFA4AE1B5799E500C4BCBE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -312,8 +327,8 @@
 				06942A7E1B9D7C8E00997925 /* Cocos2dDension */,
 				06942A771B9D75B400997925 /* PageView */,
 				06076E231B7B4DFB0057930C /* fmdb */,
-				06076DFE1B7B4A700057930C /* MJRefresh */,
 				06076DCC1B7B4A660057930C /* SDWebImage */,
+				06076DFE1B7B4A700057930C /* MJRefresh */,
 			);
 			path = 3lib;
 			sourceTree = "<group>";
@@ -433,6 +448,7 @@
 		066B35311B7B493700F8654A /* Rescoure */ = {
 			isa = PBXGroup;
 			children = (
+				068E45801BB4E661004A2CF0 /* refresh */,
 				06D7DE4E1BB3C871009B607B /* music */,
 				067274A61BABB87A00DB02F9 /* 原来你也在这里.mp3 */,
 				0693CAEF1B9EE00B00A5C887 /* icon_xiala.png */,
@@ -481,6 +497,7 @@
 		066B354F1B7B498E00F8654A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				06B326601BC7AA0700FA29A0 /* Animation */,
 				067274A21BABAEC000DB02F9 /* Music */,
 				066B35501B7B498E00F8654A /* AVCaptureDeviceViewController.h */,
 				066B35511B7B498E00F8654A /* AVCaptureDeviceViewController.m */,
@@ -496,6 +513,9 @@
 				0661B9121B954C5100D37FFE /* FMDBDemoViewController.m */,
 				06942A8E1B9D7DC000997925 /* ScrollViewController.h */,
 				06942A8F1B9D7DC000997925 /* ScrollViewController.m */,
+				068E45851BB527BF004A2CF0 /* HairGlassViewController.h */,
+				068E45861BB527BF004A2CF0 /* HairGlassViewController.m */,
+				068E45871BB527BF004A2CF0 /* HairGlassViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -540,6 +560,15 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		068E45801BB4E661004A2CF0 /* refresh */ = {
+			isa = PBXGroup;
+			children = (
+				068E45811BB4E668004A2CF0 /* loading1@2x.png */,
+				068E45821BB4E668004A2CF0 /* loading2@2x.png */,
+			);
+			path = refresh;
+			sourceTree = "<group>";
+		};
 		0693CAE21B9EDFF300A5C887 /* NLBouncePagination */ = {
 			isa = PBXGroup;
 			children = (
@@ -580,6 +609,24 @@
 			path = Cocos2dDension;
 			sourceTree = "<group>";
 		};
+		06B3265B1BC7A68C00FA29A0 /* BaseNavi */ = {
+			isa = PBXGroup;
+			children = (
+				06B3265C1BC7A6AD00FA29A0 /* BaseNavigationViewController.h */,
+				06B3265D1BC7A6AD00FA29A0 /* BaseNavigationViewController.m */,
+			);
+			path = BaseNavi;
+			sourceTree = "<group>";
+		};
+		06B326601BC7AA0700FA29A0 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				06B326611BC7AA0700FA29A0 /* AnimationViewController.h */,
+				06B326621BC7AA0700FA29A0 /* AnimationViewController.m */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
 		06BFA4A01B5799E500C4BCBE = {
 			isa = PBXGroup;
 			children = (
@@ -602,6 +649,7 @@
 		06BFA4AB1B5799E500C4BCBE /* ScrollerVC */ = {
 			isa = PBXGroup;
 			children = (
+				06B3265B1BC7A68C00FA29A0 /* BaseNavi */,
 				068B62C01BB2491400315FB2 /* Category */,
 				067609001B96A9BE009305F1 /* Model */,
 				066282E31B8D53AB00D3E693 /* Location */,
@@ -749,8 +797,10 @@
 				066B353E1B7B493700F8654A /* pic.jpg in Resources */,
 				066B353F1B7B493700F8654A /* qr_bg_bound@2x.png in Resources */,
 				06D7DE691BB3C871009B607B /* play_disc.png in Resources */,
+				068E45841BB4E668004A2CF0 /* loading2@2x.png in Resources */,
 				06D7DE671BB3C871009B607B /* lay_icn_lrc.png in Resources */,
 				06D7DE621BB3C871009B607B /* desklrc_btn_next.png in Resources */,
+				068E45891BB527BF004A2CF0 /* HairGlassViewController.xib in Resources */,
 				06BFA4B81B5799E500C4BCBE /* Main.storyboard in Resources */,
 				06D7DE651BB3C871009B607B /* desklrc_btn_prev.png in Resources */,
 				065FED0B1B7C617A00FB8E64 /* QRScan.bundle in Resources */,
@@ -758,6 +808,7 @@
 				0661B9181B95B39C00D37FFE /* ico_jiahao@2x.png in Resources */,
 				06BFA4BD1B5799E500C4BCBE /* LaunchScreen.xib in Resources */,
 				066B35411B7B493700F8654A /* qr_bg_inside@2x.png in Resources */,
+				068E45831BB4E668004A2CF0 /* loading1@2x.png in Resources */,
 				06D7DE611BB3C871009B607B /* default_radio.jpg in Resources */,
 				06076E171B7B4A700057930C /* MJRefresh.bundle in Resources */,
 				067274A71BABB87A00DB02F9 /* 原来你也在这里.mp3 in Resources */,
@@ -841,6 +892,7 @@
 				06076DF31B7B4A660057930C /* SDWebImageDownloader.m in Sources */,
 				06942A7A1B9D75B400997925 /* BTVPageViewController.m in Sources */,
 				066B35471B7B495500F8654A /* GMLCustomAlterView.m in Sources */,
+				06B326631BC7AA0700FA29A0 /* AnimationViewController.m in Sources */,
 				067609031B96A9CB009305F1 /* UserModel.m in Sources */,
 				06D7DE741BB3E3F5009B607B /* GMLSliderPopover.m in Sources */,
 				06076DEF1B7B4A660057930C /* NSData+GIF.m in Sources */,
@@ -854,6 +906,7 @@
 				06076E331B7B4DFB0057930C /* FMResultSet.m in Sources */,
 				06076DF61B7B4A660057930C /* SDWebImageManager.m in Sources */,
 				066282EC1B8D53B100D3E693 /* GMLLocationManager.m in Sources */,
+				06B3265E1BC7A6AD00FA29A0 /* BaseNavigationViewController.m in Sources */,
 				06076E181B7B4A700057930C /* MJRefreshComponent.m in Sources */,
 				0693CAEC1B9EDFF300A5C887 /* NLPullDownRefreshView.m in Sources */,
 				06076E191B7B4A700057930C /* MJRefreshConst.m in Sources */,
@@ -865,6 +918,7 @@
 				06076E311B7B4DFB0057930C /* FMDatabasePool.m in Sources */,
 				067608FD1B96A2EF009305F1 /* UserInfoCell.m in Sources */,
 				06928F1F1BA6B8A0008CB4F3 /* DrawView.m in Sources */,
+				068E45881BB527BF004A2CF0 /* HairGlassViewController.m in Sources */,
 				065FED0C1B7C617A00FB8E64 /* QRViewController.m in Sources */,
 				06BFA4AF1B5799E500C4BCBE /* main.m in Sources */,
 				06942A881B9D7C8E00997925 /* CDAudioManager.m in Sources */,
@@ -1001,7 +1055,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: du xing yu (N22M95LYKH)";
 				INFOPLIST_FILE = ScrollerVC/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e13edb34-9b61-4138-a323-2350252e1860";
@@ -1017,7 +1071,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: du xing yu (N22M95LYKH)";
 				INFOPLIST_FILE = ScrollerVC/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e13edb34-9b61-4138-a323-2350252e1860";

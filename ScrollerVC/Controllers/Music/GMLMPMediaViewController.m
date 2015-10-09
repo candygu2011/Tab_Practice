@@ -8,7 +8,10 @@
 
 #import "GMLMPMediaViewController.h"
 #import <MediaPlayer/MediaPlayer.h>
+#import "UIView+Additional.h"
 @interface GMLMPMediaViewController ()<MPMediaPickerControllerDelegate>
+
+
 /**
  * 媒体选择器
  */
@@ -27,6 +30,15 @@
     [self.musicPicker endGeneratingPlaybackNotifications];
 }
 
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+//    [self springAnimate];
+
+}
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -37,9 +49,9 @@
     [volumeView sizeToFit];
     [self.view addSubview:volumeView];
     self.volumeView = volumeView;
-    
   
 }
+
 
 #pragma mark -- layz --
 -(MPMediaPickerController *)mediaPicker

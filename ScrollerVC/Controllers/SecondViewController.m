@@ -10,19 +10,26 @@
 #import "DrawView.h"
 #import "GMLCircleView.h"
 #import "UIView+Additional.h"
+#import "MJRefresh.h"
 
 //颜色与随机颜色
 #define kRGBColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
 #define kARGBColor(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
 @interface SecondViewController ()
+{
+}
 @property (nonatomic,strong) CALayer *layer;
 @property (nonatomic,strong) UIView *containerView;
+@property (nonatomic,strong) UIScrollView *scrollView;
+
 
 
 
 @end
 
 @implementation SecondViewController
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -36,7 +43,89 @@
 //    [self emitterTtest];
     
 //    [self drawCircleView];
+//    [self.view addSubview:self.scrollView];
+//    [self addRefresh];
+    
+//    NSFileManager *fm = [NSFileManager defaultManager];
+//    NSString *createDirPath = @"";
+//    [fm createFileAtPath:createDirPath contents:[createDirPath dataUsingEncoding:NSUTF8StringEncoding] attributes:nil];
+    
+//    [self runAnimateKeyframes];
+    
 }
+
+
+- (void)runAnimateKeyframes {
+    
+    /**
+     *  relativeDuration  动画在什么时候开始
+     *  relativeStartTime 动画所持续的时间
+     */
+    
+    [UIView animateKeyframesWithDuration:6.f
+                                   delay:0.0
+                                 options:UIViewKeyframeAnimationOptionCalculationModeLinear
+                              animations:^{
+                                  [UIView addKeyframeWithRelativeStartTime:0.0   // 相对于6秒所开始的时间（第0秒开始动画）
+                                                          relativeDuration:1/3.0 // 相对于6秒动画的持续时间（动画持续2秒）
+                                                                animations:^{
+                                                                    self.view.backgroundColor = [UIColor redColor];
+                                                                }];
+                                  
+                                  [UIView addKeyframeWithRelativeStartTime:1/3.0 // 相对于6秒所开始的时间（第2秒开始动画）
+                                                          relativeDuration:1/3.0 // 相对于6秒动画的持续时间（动画持续2秒）
+                                                                animations:^{
+                                                                    self.view.backgroundColor = [UIColor yellowColor];
+                                                                }];
+                                  [UIView addKeyframeWithRelativeStartTime:2/3.0 // 相对于6秒所开始的时间（第4秒开始动画）
+                                                          relativeDuration:1/3.0 // 相对于6秒动画的持续时间（动画持续2秒）
+                                                                animations:^{
+                                                                    self.view.backgroundColor = [UIColor greenColor];                                                                }];
+                                  
+                              }
+                              completion:^(BOOL finished) {
+                                  [self runAnimateKeyframes];
+                              }];
+}
+
+-(UIScrollView *)scrollView
+{
+    if (_scrollView == nil) {
+        _scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
+        
+    }
+    return _scrollView;
+}
+
+
+- (void)addRefresh
+{
+    [self.scrollView addGifHeaderWithRefreshingTarget:self refreshingAction:@selector(loadDataFreash)];
+    self.scrollView.header.updatedTimeHidden = NO;
+    NSMutableArray *images = [NSMutableArray array];
+    UIImage *imag = [UIImage imageNamed:@"loading1"];
+    [images addObject:imag];
+    [self.scrollView.gifHeader setImages:images forState:MJRefreshHeaderStateIdle];
+    
+    NSMutableArray *refreshArr = [NSMutableArray array];
+    for (NSInteger i = 1; i <= 2; i++) {
+        UIImage *ima = [UIImage imageNamed:[NSString stringWithFormat:@"loading%zd",i]];
+        [refreshArr addObject:ima];
+    }
+    [self.scrollView.gifHeader setImages:refreshArr forState:MJRefreshHeaderStatePulling];
+    [self.scrollView.gifHeader setImages:refreshArr forState:MJRefreshHeaderStateRefreshing];
+    [self.scrollView.gifHeader beginRefreshing];
+    
+    NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:[[NSURLRequest alloc] initWithURL:[[NSURL alloc] init]] delegate:self startImmediately:NO];
+    [connection scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
+    NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES);
+    
+}
+-(void)loadDataFreash
+{
+    
+}
+
 /**
  *  火焰效果
  */
