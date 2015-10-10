@@ -87,8 +87,8 @@
 		06942A8A1B9D7C8E00997925 /* CocosDenshion.m in Sources */ = {isa = PBXBuildFile; fileRef = 06942A851B9D7C8E00997925 /* CocosDenshion.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		06942A8B1B9D7C8E00997925 /* SimpleAudioEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 06942A871B9D7C8E00997925 /* SimpleAudioEngine.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		06942A901B9D7DC000997925 /* ScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06942A8F1B9D7DC000997925 /* ScrollViewController.m */; };
-		06B3265E1BC7A6AD00FA29A0 /* BaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B3265D1BC7A6AD00FA29A0 /* BaseNavigationViewController.m */; settings = {ASSET_TAGS = (); }; };
-		06B326631BC7AA0700FA29A0 /* AnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B326621BC7AA0700FA29A0 /* AnimationViewController.m */; settings = {ASSET_TAGS = (); }; };
+		06B3265E1BC7A6AD00FA29A0 /* BaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B3265D1BC7A6AD00FA29A0 /* BaseNavigationViewController.m */; };
+		06B326631BC7AA0700FA29A0 /* AnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B326621BC7AA0700FA29A0 /* AnimationViewController.m */; };
 		06BFA4AF1B5799E500C4BCBE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 06BFA4AE1B5799E500C4BCBE /* main.m */; };
 		06BFA4B21B5799E500C4BCBE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 06BFA4B11B5799E500C4BCBE /* AppDelegate.m */; };
 		06BFA4B81B5799E500C4BCBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06BFA4B61B5799E500C4BCBE /* Main.storyboard */; };
@@ -108,6 +108,9 @@
 		06D7DE6E1BB3D6E4009B607B /* act_detail_cnt_prs.9.png in Resources */ = {isa = PBXBuildFile; fileRef = 06D7DE6D1BB3D6E4009B607B /* act_detail_cnt_prs.9.png */; };
 		06D7DE711BB3DF21009B607B /* GMLPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D7DE701BB3DF21009B607B /* GMLPopover.m */; };
 		06D7DE741BB3E3F5009B607B /* GMLSliderPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D7DE731BB3E3F5009B607B /* GMLSliderPopover.m */; };
+		06ED42B81BC8AAD5007551E7 /* AnimationPracticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06ED42B61BC8AAD5007551E7 /* AnimationPracticeViewController.m */; };
+		06ED42BD1BC8F2C3007551E7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06ED42BC1BC8F2C3007551E7 /* SystemConfiguration.framework */; };
+		06ED42BF1BC8F2FA007551E7 /* FIR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06ED42BE1BC8F2FA007551E7 /* FIR.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -299,6 +302,10 @@
 		06D7DE701BB3DF21009B607B /* GMLPopover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMLPopover.m; sourceTree = "<group>"; };
 		06D7DE721BB3E3F5009B607B /* GMLSliderPopover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMLSliderPopover.h; sourceTree = "<group>"; };
 		06D7DE731BB3E3F5009B607B /* GMLSliderPopover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMLSliderPopover.m; sourceTree = "<group>"; };
+		06ED42B51BC8AAD5007551E7 /* AnimationPracticeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationPracticeViewController.h; sourceTree = "<group>"; };
+		06ED42B61BC8AAD5007551E7 /* AnimationPracticeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationPracticeViewController.m; sourceTree = "<group>"; };
+		06ED42BC1BC8F2C3007551E7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		06ED42BE1BC8F2FA007551E7 /* FIR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FIR.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -306,7 +313,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06ED42BD1BC8F2C3007551E7 /* SystemConfiguration.framework in Frameworks */,
 				06076E351B7B4E1C0057930C /* libsqlite3.dylib in Frameworks */,
+				06ED42BF1BC8F2FA007551E7 /* FIR.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -623,6 +632,8 @@
 			children = (
 				06B326611BC7AA0700FA29A0 /* AnimationViewController.h */,
 				06B326621BC7AA0700FA29A0 /* AnimationViewController.m */,
+				06ED42B51BC8AAD5007551E7 /* AnimationPracticeViewController.h */,
+				06ED42B61BC8AAD5007551E7 /* AnimationPracticeViewController.m */,
 			);
 			path = Animation;
 			sourceTree = "<group>";
@@ -630,6 +641,8 @@
 		06BFA4A01B5799E500C4BCBE = {
 			isa = PBXGroup;
 			children = (
+				06ED42BE1BC8F2FA007551E7 /* FIR.framework */,
+				06ED42BC1BC8F2C3007551E7 /* SystemConfiguration.framework */,
 				06076E341B7B4E1C0057930C /* libsqlite3.dylib */,
 				06BFA4AB1B5799E500C4BCBE /* ScrollerVC */,
 				06BFA4C51B5799E500C4BCBE /* ScrollerVCTests */,
@@ -900,6 +913,7 @@
 				066B355A1B7B498E00F8654A /* AVCaptureDeviceViewController.m in Sources */,
 				067274AA1BABE72F00DB02F9 /* GMLMPMediaViewController.m in Sources */,
 				06076E1E1B7B4A700057930C /* MJRefreshLegendFooter.m in Sources */,
+				06ED42B81BC8AAD5007551E7 /* AnimationPracticeViewController.m in Sources */,
 				06076DFB1B7B4A660057930C /* UIImage+WebP.m in Sources */,
 				06076E1A1B7B4A700057930C /* MJRefreshFooter.m in Sources */,
 				06942A891B9D7C8E00997925 /* CDOpenALSupport.m in Sources */,
@@ -1054,9 +1068,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: du xing yu (N22M95LYKH)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = ScrollerVC/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e13edb34-9b61-4138-a323-2350252e1860";
 				SWIFT_OBJC_BRIDGING_HEADER = "ScrollerVC/Category/ScrollerVC-Bridging-Header.h";
@@ -1070,9 +1092,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: du xing yu (N22M95LYKH)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = ScrollerVC/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e13edb34-9b61-4138-a323-2350252e1860";
 				SWIFT_OBJC_BRIDGING_HEADER = "ScrollerVC/Category/ScrollerVC-Bridging-Header.h";
