@@ -11,11 +11,16 @@ typedef void(^Completion)();
 
 #import "AnimationViewController.h"
 #import "UIView+Additional.h"
+#import "AnimationPracticeViewController.h"
 
 
 @interface AnimationViewController ()
 
+{
+    CAShapeLayer *_ovalShapelayer;
+}
 @property (nonatomic,strong)  UIButton *loginBtn;
+@property (nonatomic,strong) IBOutlet  UIImageView *backgroudImageView;
 
 @property (weak, nonatomic) IBOutlet UIView *bgview;
 @property (weak, nonatomic) IBOutlet UIView *bgView2;
@@ -29,7 +34,9 @@ typedef void(^Completion)();
 @property (strong, nonatomic)  UILabel *welcomeLab;
 @property (strong, nonatomic)  UILabel *devtalkingLabelCopy;
 
+@property (weak, nonatomic) IBOutlet UIView *loadingView;
 
+@property (weak, nonatomic) IBOutlet UIView *musicView;
 
 
 @end
@@ -49,7 +56,24 @@ typedef void(^Completion)();
     self.loginBtn.centerY += 30;
     self.loginBtn.alpha = 0;
     
+    if (_ovalShapelayer == nil) {
+        _ovalShapelayer = [CAShapeLayer layer];
+        }
+    _ovalShapelayer.strokeColor = [UIColor redColor].CGColor;
+    _ovalShapelayer.fillColor = [UIColor clearColor].CGColor;
+    _ovalShapelayer.lineWidth = 7;
+    CGFloat ovalRadius = self.loadingView.size.height / 2 * 0.8;
+    UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(self.loadingView.frame.size.width / 2 - ovalRadius, self.loadingView.frame.size.height / 2 - ovalRadius, ovalRadius * 2, ovalRadius *2)];
+    _ovalShapelayer.path = path.CGPath;
+    _ovalShapelayer.lineCap = kCALineCapRound;
+    _ovalShapelayer.strokeEnd = 0.6;
+    [self.loadingView.layer addSublayer:_ovalShapelayer];
+
     
+    [self beginComplexAnimation];
+    
+    [self musicWaveAnimation];
+
 }
 
 - (void)viewDidLoad {
@@ -71,16 +95,16 @@ typedef void(^Completion)();
     self.welcomeLab.textAlignment = NSTextAlignmentCenter;
     
     
-//    UILabel *devtalkingLabelCopy = [[UILabel alloc] initWithFrame:self.welcomeLab.frame];
-//    devtalkingLabelCopy.alpha = 0;
-//    devtalkingLabelCopy.text = self.welcomeLab.text;
-//    devtalkingLabelCopy.font = self.welcomeLab.font;
-//    devtalkingLabelCopy.textAlignment = self.welcomeLab.textAlignment;
-//    devtalkingLabelCopy.textColor = self.welcomeLab.textColor;
-//    devtalkingLabelCopy.backgroundColor = [UIColor clearColor];
-//    self.devtalkingLabelCopy = devtalkingLabelCopy;
-//    self.devtalkingLabelCopy.transform = CGAffineTransformConcat(CGAffineTransformMakeScale(1.0, 0.1), CGAffineTransformMakeTranslation(1.0, self.welcomeLab.height / 2));
-//    [self.bgView4 addSubview:self.devtalkingLabelCopy ];
+    UILabel *devtalkingLabelCopy = [[UILabel alloc] initWithFrame:self.welcomeLab.frame];
+    devtalkingLabelCopy.alpha = 0;
+    devtalkingLabelCopy.text = self.welcomeLab.text;
+    devtalkingLabelCopy.font = self.welcomeLab.font;
+    devtalkingLabelCopy.textAlignment = self.welcomeLab.textAlignment;
+    devtalkingLabelCopy.textColor = self.welcomeLab.textColor;
+    devtalkingLabelCopy.backgroundColor = [UIColor clearColor];
+    self.devtalkingLabelCopy = devtalkingLabelCopy;
+    self.devtalkingLabelCopy.transform = CGAffineTransformConcat(CGAffineTransformMakeScale(1.0, 0.1), CGAffineTransformMakeTranslation(1.0, self.welcomeLab.height / 2));
+    [self.bgView4 addSubview:self.devtalkingLabelCopy ];
     
 }
 
@@ -111,22 +135,43 @@ typedef void(^Completion)();
     
     
     [self delay:0 completionBlock:^{
-       // 添加
-        [UIView transitionWithView:self.bgView4 duration:3 options:UIViewAnimationOptionTransitionFlipFromBottom animations:^{
-            [self.bgView4 addSubview:self.welcomeLab];
-            // label大小改变
-            [UIView animateWithDuration:1 animations:^{
-                self.welcomeLab.transform = CGAffineTransformConcat(CGAffineTransformMakeScale(1.0, 0.5), CGAffineTransformMakeTranslation(1.0, -self.welcomeLab.height / 2));
-                self.welcomeLab.alpha = 0;
-                
-//                self.devtalkingLabelCopy.alpha = 1;
-//                self.devtalkingLabelCopy.transform = CGAffineTransformIdentity;
-     
-            }];
+        
+        [self.bgView4 addSubview:self.welcomeLab];
+        // label 伪3D动画
+        [UIView animateWithDuration:1 animations:^{
+            self.welcomeLab.alpha = 0;
+            self.welcomeLab.transform = CGAffineTransformConcat(CGAffineTransformMakeScale(1.0, 0.5), CGAffineTransformMakeTranslation(1.0, -self.welcomeLab.height / 2));
+            self.devtalkingLabelCopy.alpha = 1;
+            self.devtalkingLabelCopy.transform = CGAffineTransformIdentity;
             
+        }];
+        // 背景切换动画
+        [UIView transitionWithView:self.backgroudImageView duration:2 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+            self.backgroudImageView.image = [UIImage imageNamed:@"icn_nomusic"];
         } completion:nil];
+        // 添加
+//        [UIView transitionWithView:self.bgView4 duration:1 options:UIViewAnimationOptionTransitionFlipFromBottom animations:^{
+//            [self.bgView4 addSubview:self.welcomeLab];
+//            // label大小改变
+//            [UIView animateWithDuration:1 animations:^{
+//                self.welcomeLab.transform = CGAffineTransformMakeScale(1.0, 0.5);
+//                self.welcomeLab.alpha = 0;
+//                
+////                self.devtalkingLabelCopy.alpha = 1;
+////                self.devtalkingLabelCopy.transform = CGAffineTransformIdentity;
+//     
+//            }];
+//            
+//        } completion:nil];
         
     }];
+    
+    
+    [self delay:4 completionBlock:^{
+        [self springAnimate];
+    }];
+    
+    
 }
 /// 延时函数
 - (void)delay:(double)seconds completionBlock:(Completion)completion
@@ -152,15 +197,66 @@ typedef void(^Completion)();
     }];
 }
 
-
-- (IBAction)goAction:(id)sender
+// 圆弧旋转效果
+- (void)beginSimpleAnimation
 {
-  
-    [self springAnimate];
-
+    CABasicAnimation *rotate = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
+    rotate.duration = 1.5;
+    rotate.fromValue = [NSNumber numberWithDouble:0.0];
+    rotate.toValue = [NSNumber numberWithDouble:2 * M_PI];
+    rotate.repeatCount = MAXFLOAT;
+    [self.loadingView.layer addAnimation:rotate forKey:nil];
 }
-
-
+// 网页加载动画
+- (void)beginComplexAnimation
+{
+    CABasicAnimation *strokeStartAnimate = [CABasicAnimation animationWithKeyPath:@"strokeStart"];
+    strokeStartAnimate.fromValue = [NSNumber numberWithFloat:-0.5];
+    strokeStartAnimate.toValue = [NSNumber numberWithFloat:1.0];
+    
+    CABasicAnimation *strokeEndAnimate = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+    strokeEndAnimate.fromValue = [NSNumber numberWithFloat:0.0];
+    strokeEndAnimate.toValue = [NSNumber numberWithFloat:1.0];
+    
+    CAAnimationGroup *strokeGroup = [CAAnimationGroup animation];
+    strokeGroup.duration = 1.5;
+    strokeGroup.repeatCount = MAXFLOAT;
+    strokeGroup.animations = @[strokeStartAnimate,strokeEndAnimate];
+    [_ovalShapelayer addAnimation:strokeGroup forKey:nil];
+    
+}
+//  音乐效果
+- (void)musicWaveAnimation
+{
+    CAReplicatorLayer *replicatorLayer = [CAReplicatorLayer layer];
+    replicatorLayer.bounds = CGRectMake(self.musicView.frame.origin.x, self.musicView.frame.origin.y, self.musicView.frame.size.width, self.musicView.frame.size.height);
+    replicatorLayer.anchorPoint = CGPointMake(0, 0);
+    replicatorLayer.backgroundColor = [UIColor greenColor].CGColor;
+    [self.musicView.layer addSublayer:replicatorLayer];
+    
+    CALayer *rectangle = [CALayer layer];
+    rectangle.bounds = CGRectMake(0, 0, 30, 90);
+    rectangle.anchorPoint = CGPointMake(0, 0);
+    rectangle.position = CGPointMake(self.musicView.frame.origin.x + 10, self.musicView.frame.origin.y + 90);
+    rectangle.cornerRadius = 2;
+    rectangle.backgroundColor = [UIColor whiteColor].CGColor;
+    [replicatorLayer addSublayer:rectangle];
+    
+    CABasicAnimation *moveRectangle = [CABasicAnimation animationWithKeyPath:@"position.y"];
+    moveRectangle.toValue =[NSNumber numberWithFloat: rectangle.position.y - 70];
+    moveRectangle.duration = 0.7;
+    moveRectangle.autoreverses = YES; // 反向运动
+    moveRectangle.repeatCount = MAXFLOAT;
+    [rectangle addAnimation:moveRectangle forKey:nil];
+    
+    replicatorLayer.instanceCount = 3;// 复制3份
+    // CATransform3DMakeScale 大小变化
+    // CATransform3DMakeTranslation  位置变化
+    replicatorLayer.instanceTransform = CATransform3DMakeTranslation(40, 0, 0);
+    replicatorLayer.instanceDelay = 0.3;
+    replicatorLayer.masksToBounds = YES;
+    
+}
 
 
 
