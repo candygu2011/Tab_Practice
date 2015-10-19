@@ -87,6 +87,9 @@
 		06942A8A1B9D7C8E00997925 /* CocosDenshion.m in Sources */ = {isa = PBXBuildFile; fileRef = 06942A851B9D7C8E00997925 /* CocosDenshion.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		06942A8B1B9D7C8E00997925 /* SimpleAudioEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 06942A871B9D7C8E00997925 /* SimpleAudioEngine.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		06942A901B9D7DC000997925 /* ScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06942A8F1B9D7DC000997925 /* ScrollViewController.m */; };
+		06A7D10C1BD4ED63004620BB /* GMLUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A7D10B1BD4ED63004620BB /* GMLUIViewController.m */; };
+		06A7D10F1BD4EDCB004620BB /* cloud.png in Resources */ = {isa = PBXBuildFile; fileRef = 06A7D10D1BD4EDCB004620BB /* cloud.png */; };
+		06A7D1101BD4EDCB004620BB /* sun.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 06A7D10E1BD4EDCB004620BB /* sun.jpeg */; };
 		06B3265E1BC7A6AD00FA29A0 /* BaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B3265D1BC7A6AD00FA29A0 /* BaseNavigationViewController.m */; };
 		06B326631BC7AA0700FA29A0 /* AnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B326621BC7AA0700FA29A0 /* AnimationViewController.m */; };
 		06BFA4AF1B5799E500C4BCBE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 06BFA4AE1B5799E500C4BCBE /* main.m */; };
@@ -271,6 +274,10 @@
 		06942A871B9D7C8E00997925 /* SimpleAudioEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleAudioEngine.m; sourceTree = "<group>"; };
 		06942A8E1B9D7DC000997925 /* ScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewController.h; sourceTree = "<group>"; };
 		06942A8F1B9D7DC000997925 /* ScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewController.m; sourceTree = "<group>"; };
+		06A7D10A1BD4ED63004620BB /* GMLUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMLUIViewController.h; sourceTree = "<group>"; };
+		06A7D10B1BD4ED63004620BB /* GMLUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMLUIViewController.m; sourceTree = "<group>"; };
+		06A7D10D1BD4EDCB004620BB /* cloud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloud.png; sourceTree = "<group>"; };
+		06A7D10E1BD4EDCB004620BB /* sun.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sun.jpeg; sourceTree = "<group>"; };
 		06B3265C1BC7A6AD00FA29A0 /* BaseNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationViewController.h; sourceTree = "<group>"; };
 		06B3265D1BC7A6AD00FA29A0 /* BaseNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationViewController.m; sourceTree = "<group>"; };
 		06B326611BC7AA0700FA29A0 /* AnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationViewController.h; sourceTree = "<group>"; };
@@ -457,6 +464,8 @@
 		066B35311B7B493700F8654A /* Rescoure */ = {
 			isa = PBXGroup;
 			children = (
+				06A7D10D1BD4EDCB004620BB /* cloud.png */,
+				06A7D10E1BD4EDCB004620BB /* sun.jpeg */,
 				068E45801BB4E661004A2CF0 /* refresh */,
 				06D7DE4E1BB3C871009B607B /* music */,
 				067274A61BABB87A00DB02F9 /* 原来你也在这里.mp3 */,
@@ -506,6 +515,7 @@
 		066B354F1B7B498E00F8654A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				06A7D1091BD4ED63004620BB /* Scroll */,
 				06B326601BC7AA0700FA29A0 /* Animation */,
 				067274A21BABAEC000DB02F9 /* Music */,
 				066B35501B7B498E00F8654A /* AVCaptureDeviceViewController.h */,
@@ -616,6 +626,15 @@
 				06942A871B9D7C8E00997925 /* SimpleAudioEngine.m */,
 			);
 			path = Cocos2dDension;
+			sourceTree = "<group>";
+		};
+		06A7D1091BD4ED63004620BB /* Scroll */ = {
+			isa = PBXGroup;
+			children = (
+				06A7D10A1BD4ED63004620BB /* GMLUIViewController.h */,
+				06A7D10B1BD4ED63004620BB /* GMLUIViewController.m */,
+			);
+			path = Scroll;
 			sourceTree = "<group>";
 		};
 		06B3265B1BC7A68C00FA29A0 /* BaseNavi */ = {
@@ -813,6 +832,7 @@
 				068E45841BB4E668004A2CF0 /* loading2@2x.png in Resources */,
 				06D7DE671BB3C871009B607B /* lay_icn_lrc.png in Resources */,
 				06D7DE621BB3C871009B607B /* desklrc_btn_next.png in Resources */,
+				06A7D1101BD4EDCB004620BB /* sun.jpeg in Resources */,
 				068E45891BB527BF004A2CF0 /* HairGlassViewController.xib in Resources */,
 				06BFA4B81B5799E500C4BCBE /* Main.storyboard in Resources */,
 				06D7DE651BB3C871009B607B /* desklrc_btn_prev.png in Resources */,
@@ -821,6 +841,7 @@
 				0661B9181B95B39C00D37FFE /* ico_jiahao@2x.png in Resources */,
 				06BFA4BD1B5799E500C4BCBE /* LaunchScreen.xib in Resources */,
 				066B35411B7B493700F8654A /* qr_bg_inside@2x.png in Resources */,
+				06A7D10F1BD4EDCB004620BB /* cloud.png in Resources */,
 				068E45831BB4E668004A2CF0 /* loading1@2x.png in Resources */,
 				06D7DE611BB3C871009B607B /* default_radio.jpg in Resources */,
 				06076E171B7B4A700057930C /* MJRefresh.bundle in Resources */,
@@ -905,6 +926,7 @@
 				06076DF31B7B4A660057930C /* SDWebImageDownloader.m in Sources */,
 				06942A7A1B9D75B400997925 /* BTVPageViewController.m in Sources */,
 				066B35471B7B495500F8654A /* GMLCustomAlterView.m in Sources */,
+				06A7D10C1BD4ED63004620BB /* GMLUIViewController.m in Sources */,
 				06B326631BC7AA0700FA29A0 /* AnimationViewController.m in Sources */,
 				067609031B96A9CB009305F1 /* UserModel.m in Sources */,
 				06D7DE741BB3E3F5009B607B /* GMLSliderPopover.m in Sources */,

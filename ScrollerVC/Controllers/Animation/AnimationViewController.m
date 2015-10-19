@@ -44,6 +44,7 @@ typedef void(^Completion)();
 @implementation AnimationViewController
 -(void)viewWillAppear:(BOOL)animated
 {
+    NSLog(@"%s",__FUNCTION__);
     [super viewWillAppear:animated];
     
     UIButton *btn = [[UIButton alloc] init];
@@ -76,7 +77,17 @@ typedef void(^Completion)();
 
 }
 
+-(void)loadView
+{
+    [super loadView];
+    NSLog(@"%s",__FUNCTION__);
+
+}
+
 - (void)viewDidLoad {
+    
+    NSLog(@"%s",__FUNCTION__);
+
     [super viewDidLoad];
     self.keImge = [[UIImageView alloc] init];
     self.keImge.frame = CGRectMake(0, 0, 200, 151.5);
@@ -110,7 +121,8 @@ typedef void(^Completion)();
 
 -(void)viewDidAppear:(BOOL)animated
 {
-    
+    NSLog(@"%s",__FUNCTION__);
+
     [super viewDidAppear:animated];
     [self delay:0 completionBlock:^{
         

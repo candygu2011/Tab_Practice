@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "SecondViewController.h"
 #import "UIView+Extension.h"
+#import "GMLUIViewController.h"
 #define kScreenSize [UIScreen mainScreen].bounds.size
 //颜色与随机颜色
 #define kRGBColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
