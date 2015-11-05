@@ -40,7 +40,6 @@
 		06076E311B7B4DFB0057930C /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 06076E291B7B4DFB0057930C /* FMDatabasePool.m */; };
 		06076E321B7B4DFB0057930C /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 06076E2B1B7B4DFB0057930C /* FMDatabaseQueue.m */; };
 		06076E331B7B4DFB0057930C /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 06076E2E1B7B4DFB0057930C /* FMResultSet.m */; };
-		06076E351B7B4E1C0057930C /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 06076E341B7B4E1C0057930C /* libsqlite3.dylib */; };
 		065FED0B1B7C617A00FB8E64 /* QRScan.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 065FED081B7C617A00FB8E64 /* QRScan.bundle */; };
 		065FED0C1B7C617A00FB8E64 /* QRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 065FED0A1B7C617A00FB8E64 /* QRViewController.m */; };
 		066038B11B8C3F6900587700 /* NSDictionary+Additional.m in Sources */ = {isa = PBXBuildFile; fileRef = 066038B01B8C3F6900587700 /* NSDictionary+Additional.m */; };
@@ -92,11 +91,15 @@
 		06A7D1101BD4EDCB004620BB /* sun.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 06A7D10E1BD4EDCB004620BB /* sun.jpeg */; };
 		06B3265E1BC7A6AD00FA29A0 /* BaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B3265D1BC7A6AD00FA29A0 /* BaseNavigationViewController.m */; };
 		06B326631BC7AA0700FA29A0 /* AnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B326621BC7AA0700FA29A0 /* AnimationViewController.m */; };
+		06B389701BDF497B002AD231 /* GMLQuarz2DViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B3896F1BDF497B002AD231 /* GMLQuarz2DViewCtrl.m */; };
 		06BFA4AF1B5799E500C4BCBE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 06BFA4AE1B5799E500C4BCBE /* main.m */; };
 		06BFA4B21B5799E500C4BCBE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 06BFA4B11B5799E500C4BCBE /* AppDelegate.m */; };
 		06BFA4B81B5799E500C4BCBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06BFA4B61B5799E500C4BCBE /* Main.storyboard */; };
 		06BFA4BD1B5799E500C4BCBE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06BFA4BB1B5799E500C4BCBE /* LaunchScreen.xib */; };
 		06BFA4C91B5799E500C4BCBE /* ScrollerVCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 06BFA4C81B5799E500C4BCBE /* ScrollerVCTests.m */; };
+		06BFBCF61BEB4417008BC68F /* BasicAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06BFBCF41BEB4417008BC68F /* BasicAnimationViewController.m */; };
+		06BFBCF71BEB4417008BC68F /* BasicAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06BFBCF51BEB4417008BC68F /* BasicAnimationViewController.xib */; };
+		06C11B9F1BE8528100352498 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 06C11B9E1BE8528100352498 /* libsqlite3.0.dylib */; };
 		06D7DE4D1BB397DF009B607B /* GMLCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D7DE4C1BB397DF009B607B /* GMLCircleView.m */; };
 		06D7DE611BB3C871009B607B /* default_radio.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 06D7DE531BB3C871009B607B /* default_radio.jpg */; };
 		06D7DE621BB3C871009B607B /* desklrc_btn_next.png in Resources */ = {isa = PBXBuildFile; fileRef = 06D7DE541BB3C871009B607B /* desklrc_btn_next.png */; };
@@ -113,7 +116,6 @@
 		06D7DE741BB3E3F5009B607B /* GMLSliderPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D7DE731BB3E3F5009B607B /* GMLSliderPopover.m */; };
 		06ED42B81BC8AAD5007551E7 /* AnimationPracticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06ED42B61BC8AAD5007551E7 /* AnimationPracticeViewController.m */; };
 		06ED42BD1BC8F2C3007551E7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06ED42BC1BC8F2C3007551E7 /* SystemConfiguration.framework */; };
-		06ED42BF1BC8F2FA007551E7 /* FIR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06ED42BE1BC8F2FA007551E7 /* FIR.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -195,7 +197,6 @@
 		06076E2C1B7B4DFB0057930C /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
 		06076E2D1B7B4DFB0057930C /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		06076E2E1B7B4DFB0057930C /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
-		06076E341B7B4E1C0057930C /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		065FED081B7C617A00FB8E64 /* QRScan.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = QRScan.bundle; sourceTree = "<group>"; };
 		065FED091B7C617A00FB8E64 /* QRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRViewController.h; sourceTree = "<group>"; };
 		065FED0A1B7C617A00FB8E64 /* QRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRViewController.m; sourceTree = "<group>"; };
@@ -282,6 +283,8 @@
 		06B3265D1BC7A6AD00FA29A0 /* BaseNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationViewController.m; sourceTree = "<group>"; };
 		06B326611BC7AA0700FA29A0 /* AnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationViewController.h; sourceTree = "<group>"; };
 		06B326621BC7AA0700FA29A0 /* AnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationViewController.m; sourceTree = "<group>"; };
+		06B3896E1BDF497B002AD231 /* GMLQuarz2DViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMLQuarz2DViewCtrl.h; sourceTree = "<group>"; };
+		06B3896F1BDF497B002AD231 /* GMLQuarz2DViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMLQuarz2DViewCtrl.m; sourceTree = "<group>"; };
 		06BFA4A91B5799E500C4BCBE /* ScrollerVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrollerVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06BFA4AD1B5799E500C4BCBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06BFA4AE1B5799E500C4BCBE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -292,6 +295,10 @@
 		06BFA4C21B5799E500C4BCBE /* ScrollerVCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrollerVCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		06BFA4C71B5799E500C4BCBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06BFA4C81B5799E500C4BCBE /* ScrollerVCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollerVCTests.m; sourceTree = "<group>"; };
+		06BFBCF31BEB4417008BC68F /* BasicAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicAnimationViewController.h; sourceTree = "<group>"; };
+		06BFBCF41BEB4417008BC68F /* BasicAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicAnimationViewController.m; sourceTree = "<group>"; };
+		06BFBCF51BEB4417008BC68F /* BasicAnimationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BasicAnimationViewController.xib; sourceTree = "<group>"; };
+		06C11B9E1BE8528100352498 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		06D7DE4B1BB397DF009B607B /* GMLCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMLCircleView.h; sourceTree = "<group>"; };
 		06D7DE4C1BB397DF009B607B /* GMLCircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMLCircleView.m; sourceTree = "<group>"; };
 		06D7DE531BB3C871009B607B /* default_radio.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = default_radio.jpg; sourceTree = "<group>"; };
@@ -312,7 +319,6 @@
 		06ED42B51BC8AAD5007551E7 /* AnimationPracticeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationPracticeViewController.h; sourceTree = "<group>"; };
 		06ED42B61BC8AAD5007551E7 /* AnimationPracticeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationPracticeViewController.m; sourceTree = "<group>"; };
 		06ED42BC1BC8F2C3007551E7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		06ED42BE1BC8F2FA007551E7 /* FIR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FIR.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -320,9 +326,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06C11B9F1BE8528100352498 /* libsqlite3.0.dylib in Frameworks */,
 				06ED42BD1BC8F2C3007551E7 /* SystemConfiguration.framework in Frameworks */,
-				06076E351B7B4E1C0057930C /* libsqlite3.dylib in Frameworks */,
-				06ED42BF1BC8F2FA007551E7 /* FIR.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -633,6 +638,8 @@
 			children = (
 				06A7D10A1BD4ED63004620BB /* GMLUIViewController.h */,
 				06A7D10B1BD4ED63004620BB /* GMLUIViewController.m */,
+				06B3896E1BDF497B002AD231 /* GMLQuarz2DViewCtrl.h */,
+				06B3896F1BDF497B002AD231 /* GMLQuarz2DViewCtrl.m */,
 			);
 			path = Scroll;
 			sourceTree = "<group>";
@@ -653,6 +660,9 @@
 				06B326621BC7AA0700FA29A0 /* AnimationViewController.m */,
 				06ED42B51BC8AAD5007551E7 /* AnimationPracticeViewController.h */,
 				06ED42B61BC8AAD5007551E7 /* AnimationPracticeViewController.m */,
+				06BFBCF31BEB4417008BC68F /* BasicAnimationViewController.h */,
+				06BFBCF41BEB4417008BC68F /* BasicAnimationViewController.m */,
+				06BFBCF51BEB4417008BC68F /* BasicAnimationViewController.xib */,
 			);
 			path = Animation;
 			sourceTree = "<group>";
@@ -660,9 +670,8 @@
 		06BFA4A01B5799E500C4BCBE = {
 			isa = PBXGroup;
 			children = (
-				06ED42BE1BC8F2FA007551E7 /* FIR.framework */,
+				06C11B9E1BE8528100352498 /* libsqlite3.0.dylib */,
 				06ED42BC1BC8F2C3007551E7 /* SystemConfiguration.framework */,
-				06076E341B7B4E1C0057930C /* libsqlite3.dylib */,
 				06BFA4AB1B5799E500C4BCBE /* ScrollerVC */,
 				06BFA4C51B5799E500C4BCBE /* ScrollerVCTests */,
 				06BFA4AA1B5799E500C4BCBE /* Products */,
@@ -829,6 +838,7 @@
 				066B353E1B7B493700F8654A /* pic.jpg in Resources */,
 				066B353F1B7B493700F8654A /* qr_bg_bound@2x.png in Resources */,
 				06D7DE691BB3C871009B607B /* play_disc.png in Resources */,
+				06BFBCF71BEB4417008BC68F /* BasicAnimationViewController.xib in Resources */,
 				068E45841BB4E668004A2CF0 /* loading2@2x.png in Resources */,
 				06D7DE671BB3C871009B607B /* lay_icn_lrc.png in Resources */,
 				06D7DE621BB3C871009B607B /* desklrc_btn_next.png in Resources */,
@@ -897,6 +907,7 @@
 				0693CAEB1B9EDFF300A5C887 /* NLMainTableViewController.m in Sources */,
 				066B355D1B7B498E00F8654A /* SecondViewController.m in Sources */,
 				06076DF71B7B4A660057930C /* SDWebImagePrefetcher.m in Sources */,
+				06BFBCF61BEB4417008BC68F /* BasicAnimationViewController.m in Sources */,
 				06076DEE1B7B4A660057930C /* MKAnnotationView+WebCache.m in Sources */,
 				06942A901B9D7DC000997925 /* ScrollViewController.m in Sources */,
 				06076DF51B7B4A660057930C /* SDWebImageManager+MJ.m in Sources */,
@@ -921,6 +932,7 @@
 				0693CAED1B9EDFF300A5C887 /* NLPullUpRefreshView.m in Sources */,
 				06942A8B1B9D7C8E00997925 /* SimpleAudioEngine.m in Sources */,
 				06076DFD1B7B4A660057930C /* UIImageView+WebCache.m in Sources */,
+				06B389701BDF497B002AD231 /* GMLQuarz2DViewCtrl.m in Sources */,
 				06076DFA1B7B4A660057930C /* UIImage+MultiFormat.m in Sources */,
 				067274A51BABAEC000DB02F9 /* GMLMusicTableViewController.m in Sources */,
 				06076DF31B7B4A660057930C /* SDWebImageDownloader.m in Sources */,

@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import "GMLLocationDetailAddressManager.h"
-#import <FIR/FIR.h>
 @interface AppDelegate ()
 
 @end
@@ -20,7 +19,6 @@
 
     [GMLLocationDetailAddressManager shareInstance];
     [GMLLocationDetailAddressManager reObtainLocation];
-    [FIR handleCrashWithKey:@"com.tuanche.avcap"];
     
     
     return YES;

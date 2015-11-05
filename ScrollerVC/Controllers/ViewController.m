@@ -30,7 +30,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.titles = @[@"全部", @"待付款", @"未消费", @"退款单"];
+    self.titles = @[@"选项卡"];
 
     [self setupUI];
     

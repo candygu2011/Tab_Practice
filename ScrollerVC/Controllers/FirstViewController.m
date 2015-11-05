@@ -11,6 +11,8 @@
 #import "GMLCustomAlterView.h"
 #import "ScrollViewController.h"
 #import "HairGlassViewController.h"
+#import "BasicAnimationViewController.h"
+
 @interface FirstViewController ()
 //剩余票数
 @property(nonatomic,assign) int leftTicketsCount;
@@ -27,7 +29,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _label.text = @"就只是在测试下autolayout而已啦啦啦啦啦啦啦啦";
+    _label.text = @"就只是";
     
     /*一、线程锁 */
     //默认有20张票
@@ -165,7 +167,6 @@
  */
 - (IBAction)gcdAction:(id)sender {
     
-    
     GMLCustomAlterView *alterView = [[GMLCustomAlterView alloc] initWithFrame:self.view.bounds style:GMLCustomAlterViewStyleGlobal];
     
     [alterView showView];
@@ -183,6 +184,12 @@
     [self.navigationController pushViewController:hairVC animated:YES];
 }
 
+- (IBAction)basicAnimation:(id)sender {
+    BasicAnimationViewController *bani = [[BasicAnimationViewController alloc] initWithNibName:@"BasicAnimationViewController" bundle:nil];
+    bani.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:bani animated:YES];
+
+}
 
 @end
 

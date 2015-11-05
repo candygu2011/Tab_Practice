@@ -19,7 +19,7 @@
 {
 }
 @property (nonatomic,strong) CALayer *layer;
-@property (nonatomic,strong) UIView *containerView;
+@property (nonatomic,strong) UIImageView *containerView;
 @property (nonatomic,strong) UIScrollView *scrollView;
 
 
@@ -51,7 +51,31 @@
 //    [fm createFileAtPath:createDirPath contents:[createDirPath dataUsingEncoding:NSUTF8StringEncoding] attributes:nil];
     
 //    [self runAnimateKeyframes];
+    self.view.backgroundColor = [UIColor whiteColor];
+    UIImageView *imgView = [[UIImageView alloc] initWithFrame:self.view.bounds];
+    self.containerView = imgView;
+//    [self testQuartz2D];
     
+    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(20, 20, 100, 100)];
+    btn.backgroundColor = [UIColor redColor];
+    [btn addTarget:self action:@selector(animationAction) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn];
+}
+-(void)animationAction
+{
+ }
+
+- (void)testQuartz2D
+{
+    //
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(200, 200), NO, 0);
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    CGContextAddEllipseInRect(ctx, CGRectMake(0, 0, 100, 100));
+    CGContextStrokePath(ctx);
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    self.containerView.image = image;
+    NSData *data=UIImagePNGRepresentation(image);
+    [data writeToFile:@"/Users/hi/Desktop/abc.png" atomically:YES];
 }
 
 

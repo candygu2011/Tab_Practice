@@ -39,7 +39,7 @@ typedef NS_ENUM(NSInteger, GMLCustomAlterViewStyle) {
 - (void)hideView;
 
 @property (strong, nonatomic) UIView *contentView;
-@property (strong, nonatomic) UIImageView *imageView;
+@property (strong, nonatomic) UILabel *titleLabel;
 @property (strong, nonatomic) UILabel *messageLabel;
 @property (strong, nonatomic) UILabel *detailLabel;
 @property (strong, nonatomic) UIButton *closeButton;

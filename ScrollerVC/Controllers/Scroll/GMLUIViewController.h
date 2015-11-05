@@ -1,5 +1,5 @@
 //
-//  GMLView.h
+//  GMLUIViewController.h
 //  微博个人详情页
 //
 //  Created by hi on 15/10/19.

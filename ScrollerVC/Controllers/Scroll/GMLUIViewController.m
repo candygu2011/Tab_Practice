@@ -1,5 +1,5 @@
 //
-//  GMLView.m
+//  GMLUIViewController.m
 //  微博个人详情页
 //
 //  Created by hi on 15/10/19.
@@ -85,6 +85,8 @@ static CGFloat const tabBarH = 44;
     UIImage *image = [self imageWithColor:[UIColor colorWithWhite:1 alpha:alpha]];
     [self.navigationController.navigationBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
    
+    NSLog(@"%@",NSStringFromCGSize(scrollView.contentSize));
+
 }
 
 
