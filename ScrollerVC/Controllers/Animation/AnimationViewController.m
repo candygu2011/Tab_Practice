@@ -14,6 +14,7 @@ typedef void(^Completion)();
 #import "AnimationPracticeViewController.h"
 
 
+
 @interface AnimationViewController ()
 
 {
@@ -207,6 +208,8 @@ typedef void(^Completion)();
     } completion:^(BOOL finished) {
         
     }];
+    // 关键帧动画
+    
 }
 
 // 圆弧旋转效果

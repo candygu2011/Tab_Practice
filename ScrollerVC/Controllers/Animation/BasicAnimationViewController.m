@@ -7,6 +7,8 @@
 //
 
 #import "BasicAnimationViewController.h"
+#import <objc/runtime.h>
+#import "GradientAnimationVCViewController.h"
 
 @interface BasicAnimationViewController ()
 {
@@ -62,10 +64,10 @@
 
 
 - (IBAction)basicAnimation:(id)sender {
-    [self initScaleLayer];
-    [self initMoveLayer];
-    [self initRotateLayer];
-    [self initGroupLayer];
+//    [self initScaleLayer];
+//    [self initMoveLayer];
+//    [self initRotateLayer];
+//    [self initGroupLayer];
 
  }
 
@@ -179,6 +181,7 @@
 
 -(void)doTransitionWithType:(UIViewAnimationOptions)animationTransitionType
 {
+
     if ([self.view.subviews containsObject:_view2]) {
         [UIView transitionFromView:_view2 toView:_view1 duration:2.0 options:animationTransitionType completion:^(BOOL finished) {
             [_view2 removeFromSuperview];
@@ -196,7 +199,14 @@
 
 }
 
+- (IBAction)gradientAnimation:(id)sender {
+    
+    [self.navigationController pushViewController:[[GradientAnimationVCViewController alloc] init] animated:YES];
+}
+
+
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    }
+    
+}
 @end

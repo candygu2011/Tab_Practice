@@ -86,6 +86,8 @@
 		06942A8A1B9D7C8E00997925 /* CocosDenshion.m in Sources */ = {isa = PBXBuildFile; fileRef = 06942A851B9D7C8E00997925 /* CocosDenshion.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		06942A8B1B9D7C8E00997925 /* SimpleAudioEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 06942A871B9D7C8E00997925 /* SimpleAudioEngine.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		06942A901B9D7DC000997925 /* ScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06942A8F1B9D7DC000997925 /* ScrollViewController.m */; };
+		069D04A21C05A51B00730BCA /* GradientAnimationVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 069D04A01C05A51B00730BCA /* GradientAnimationVCViewController.m */; settings = {ASSET_TAGS = (); }; };
+		069D04A31C05A51B00730BCA /* GradientAnimationVCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 069D04A11C05A51B00730BCA /* GradientAnimationVCViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		06A7D10C1BD4ED63004620BB /* GMLUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A7D10B1BD4ED63004620BB /* GMLUIViewController.m */; };
 		06A7D10F1BD4EDCB004620BB /* cloud.png in Resources */ = {isa = PBXBuildFile; fileRef = 06A7D10D1BD4EDCB004620BB /* cloud.png */; };
 		06A7D1101BD4EDCB004620BB /* sun.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 06A7D10E1BD4EDCB004620BB /* sun.jpeg */; };
@@ -275,6 +277,10 @@
 		06942A871B9D7C8E00997925 /* SimpleAudioEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleAudioEngine.m; sourceTree = "<group>"; };
 		06942A8E1B9D7DC000997925 /* ScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewController.h; sourceTree = "<group>"; };
 		06942A8F1B9D7DC000997925 /* ScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewController.m; sourceTree = "<group>"; };
+		069D04991C059ACD00730BCA /* ScrollerVC-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ScrollerVC-Bridging-Header.h"; sourceTree = "<group>"; };
+		069D049F1C05A51B00730BCA /* GradientAnimationVCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientAnimationVCViewController.h; sourceTree = "<group>"; };
+		069D04A01C05A51B00730BCA /* GradientAnimationVCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientAnimationVCViewController.m; sourceTree = "<group>"; };
+		069D04A11C05A51B00730BCA /* GradientAnimationVCViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GradientAnimationVCViewController.xib; sourceTree = "<group>"; };
 		06A7D10A1BD4ED63004620BB /* GMLUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMLUIViewController.h; sourceTree = "<group>"; };
 		06A7D10B1BD4ED63004620BB /* GMLUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMLUIViewController.m; sourceTree = "<group>"; };
 		06A7D10D1BD4EDCB004620BB /* cloud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloud.png; sourceTree = "<group>"; };
@@ -663,6 +669,9 @@
 				06BFBCF31BEB4417008BC68F /* BasicAnimationViewController.h */,
 				06BFBCF41BEB4417008BC68F /* BasicAnimationViewController.m */,
 				06BFBCF51BEB4417008BC68F /* BasicAnimationViewController.xib */,
+				069D049F1C05A51B00730BCA /* GradientAnimationVCViewController.h */,
+				069D04A01C05A51B00730BCA /* GradientAnimationVCViewController.m */,
+				069D04A11C05A51B00730BCA /* GradientAnimationVCViewController.xib */,
 			);
 			path = Animation;
 			sourceTree = "<group>";
@@ -714,6 +723,7 @@
 			children = (
 				06BFA4AD1B5799E500C4BCBE /* Info.plist */,
 				06BFA4AE1B5799E500C4BCBE /* main.m */,
+				069D04991C059ACD00730BCA /* ScrollerVC-Bridging-Header.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -848,6 +858,7 @@
 				06D7DE651BB3C871009B607B /* desklrc_btn_prev.png in Resources */,
 				065FED0B1B7C617A00FB8E64 /* QRScan.bundle in Resources */,
 				066B353B1B7B493700F8654A /* 4@2x.png in Resources */,
+				069D04A31C05A51B00730BCA /* GradientAnimationVCViewController.xib in Resources */,
 				0661B9181B95B39C00D37FFE /* ico_jiahao@2x.png in Resources */,
 				06BFA4BD1B5799E500C4BCBE /* LaunchScreen.xib in Resources */,
 				066B35411B7B493700F8654A /* qr_bg_inside@2x.png in Resources */,
@@ -920,6 +931,7 @@
 				0693CAEE1B9EDFF300A5C887 /* NLSubTableViewController.m in Sources */,
 				066B354D1B7B496D00F8654A /* UIView+Additional.m in Sources */,
 				06076DFC1B7B4A660057930C /* UIImageView+MJWebCache.m in Sources */,
+				069D04A21C05A51B00730BCA /* GradientAnimationVCViewController.m in Sources */,
 				06076DF81B7B4A660057930C /* UIButton+WebCache.m in Sources */,
 				0661B9131B954C5100D37FFE /* FMDBDemoViewController.m in Sources */,
 				06076DF11B7B4A660057930C /* SDWebImageCompat.m in Sources */,
@@ -1115,7 +1127,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e13edb34-9b61-4138-a323-2350252e1860";
-				SWIFT_OBJC_BRIDGING_HEADER = "ScrollerVC/Category/ScrollerVC-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/hi/Desktop/ScrollerVC/ScrollerVC/ScrollerVC-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -1139,7 +1151,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e13edb34-9b61-4138-a323-2350252e1860";
-				SWIFT_OBJC_BRIDGING_HEADER = "ScrollerVC/Category/ScrollerVC-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/hi/Desktop/ScrollerVC/ScrollerVC/ScrollerVC-Bridging-Header.h";
 			};
 			name = Release;
 		};
